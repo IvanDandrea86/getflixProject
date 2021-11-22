@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  ## PHP-Apache service
+  server:
+    build:
+      context: ./application
+    container_name: getflix-webserver
+    ports:
+      - 5000:80
+    restart: always
+    volumes:
+      - ./application/source:/var/www/html
+    env_file:
+      - ./docker.env
+    networks:
+      - getflix
+
+  ## Mariadb service 
+  database:
+    image: mariadb:10.4.2
+    container_name: getflix-database
+    restart: always
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d/
+      - getflix_data:/var/lib/mysql
+    env_file:
+      - ./docker.env
+    networks:
+      - getflix
+
+  ## PhpMyAdmin
+  myadmin:
+    image: phpmyadmin/phpmyadmin:4.8.1
+    container_name: ai-phpmyadmin
+    ports:
+      - 8081:80
+    restart: always
+    env_file:
+      - ./docker.env
+    depends_on:
+      - database
+    networks:
+      - getflix
+networks:
+  getflix:
+
+volumes:
+  getflix_data:
