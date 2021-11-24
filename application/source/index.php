@@ -15,13 +15,16 @@
 
 <?php
 include ("./composant/header.php");
+
 include ("./composant/body.php");
 include ("./composant/footer.php");
 include ("./composant/categorie_films.php");
-
-include ("./composant/formulaire_inscription.php");
-include ("./composant/formulaire_connexion.php");
-include ("./composant/carroussel.php");
+if(isset($_GET["login"])){
+    include ("./composant/formulaire_connexion.php");
+}
+if(isset($_GET["signup"])){
+    include ("./composant/formulaire_inscription.php");
+}
 ?>
 </body>
 </html>
