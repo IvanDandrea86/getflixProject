@@ -19,13 +19,13 @@ CREATE TABLE `Users` (
   `Password` varchar(255) NOT NULL,
   `LastName` varchar(255) DEFAULT NULL,
   `FirstName` varchar(255) DEFAULT NULL,
-  `Registration` smalldatetime,
+  `Registration` datetime,
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 
 -- Loading the data from the Users table
 
-INSERT INTO `users` (`Id`, `Username`, `Email`, `Password`, `Lastname`, `Firstname`, `Registration` ) VALUES
+INSERT INTO Users (Id, Username, Email, Password, Lastname, Firstname, Registration) VALUES
 (UUID(), 'tigercub++', 'annejungers@hotmail.com', '$2y$10$QJq6//fZZeUhrcedi8FSB.RPfrprMXYdFX4AAauCK7AWBdgwFwhea', 'Anne', 'Jungers'),
 (UUID(), 'nikobackend', 'gael.layeux@gmail.com', '$2y$10$tyhyBwdXMqJ3DwZPebNwieDnA7IURCkV6FPsKkzqKm2vhGBIwB6re','nicolas', 'valiacas'),
 (UUID(), 'ivanthemanager', 'nicolas.valiacas@icloud.com', '$2y$10$g9SIsLwdyWcjk85THo3xtO4TscnHhmUyaaQpmUeY68rLFQMDtkxju', 'ivan', 'dandrea'),
@@ -36,11 +36,13 @@ INSERT INTO `users` (`Id`, `Username`, `Email`, `Password`, `Lastname`, `Firstna
 --
 
 CREATE TABLE `comments` (
-  `Id_comments` binary(36) NOT NULL PRIMARY KEY,
+  `Id_comments` binary(36) NOT NULL, PRIMARY KEY,
   `Comment` text NOT NULL,
   `Rating` int(5) NOT NULL,
   `Movie_Id` int(10) NOT NULL,
-  `UserId` binary(18) NOT NULL FOREIGN KEY
+  `User_Id` binary(18) NOT NULL,
+  CONSTRAINT 'comment_user'
+     FOREIGN KEY (User_Id) REFERENCES Users(Id)   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
