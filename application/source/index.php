@@ -42,6 +42,10 @@ if(isset($_GET["signup"])){
 }
 ?>
 </body>
+
+<?php
+include ("./composant/footer.php");
+?>
 </html>
 
 
