@@ -17,7 +17,6 @@
 include ("./composant/header.php");
 
 include ("./composant/body.php");
-include ("./composant/footer.php");
 include ("./composant/categorie_films.php");
 if(isset($_GET["login"])){
     include ("./composant/formulaire_connexion.php");
@@ -27,6 +26,10 @@ if(isset($_GET["signup"])){
 }
 ?>
 </body>
+
+<?php
+include ("./composant/footer.php");
+?>
 </html>
 
 
