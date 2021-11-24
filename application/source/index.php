@@ -10,6 +10,7 @@
 </head>
 <body class="bg-danger">
 <?php
+
 include ("./composant/header.php");
 ?>
 <div class="container">

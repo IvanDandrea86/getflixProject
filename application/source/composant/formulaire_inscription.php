@@ -1,49 +1,57 @@
-
-<form class="row g-3">
+<?php
+include ("./Composant_php/create.php");
+?>
+<form class="row bg-dark g-5" method="post">
   <div class="col-md-4">
-    <label for="validationServer01" class="form-label">Prénom</label>
-    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+    <label for="validationServer01" class="form-label text-danger ">Username</label>
+    <input type="text" name="Username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" >
+    <span class="invalid-feedback"><?php echo $username_err; ?></span>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServer02" class="form-label text-danger">Nom</label>
+    <input type="text" class="form-control " id="validationServer02"  >
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationServer02" class="form-label">Nom</label>
-    <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationServerUsername" class="form-label">Nom d'utilisateur</label>
+    <label for="validationServerUsername" class="form-label text-danger">Prenom</label>
     <div class="input-group has-validation">
     
-      <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-      <div id="validationServerUsernameFeedback" class="invalid-feedback">
-        Please choose a username.
-      </div>
+      <input type="text" class="form-control"   aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
+    
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationServerUsername" class="form-label">Email</label>
+    <label for="validationServerUsername" class="form-label text-danger">Email</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend3">@</span>
-      <input type="email" class="form-control is-invalid" id="validationServerEmail" aria-describedby="inputGroupPrepend3 validationServerEmaileedback" required>
-      <div id="validationServerEmailFeedback" class="invalid-feedback">
-        Please enter an email.
-      </div>
+      <input type="email" name="Email" class="form-control 
+      <!-- inject php here  -->
+      " id="validationServerEmail" aria-describedby="inputGroupPrepend3 validationServerEmaileedback" >
+     <!-- inject php -->
     </div>
   </div>
+  <div class="col-md-4">
+    <label for="password" class="col-form-label text-danger">Password:</label>
+                        <input type="password" name ="Password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" name="Password" id="password"></input>
+                        <span class="invalid-feedback"><?php echo $password_err; ?></span>
+    </div>
+  <div class="col-md-4">
+  <label for="confirm_password" class="col-form-label text-danger">Confirm Password:</label>
+                        <input type="password" name ="confirm_Password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" name="confirm_Password" id="confirm_password"></input>
+                        <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+    </div>
   <div class="col-md-6">
-    <label for="validationServer03" class="form-label">Ville</label>
-    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+    <label for="validationServer03 text-danger" class="form-label">Ville</label>
+    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" >
     <div id="validationServer03Feedback" class="invalid-feedback">
       Please provide a valid city.
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationServer04" class="form-label">Pays</label>
-    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+    <label for="validationServer04 text-danger" class="form-label">Pays</label>
+    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback">
       <option selected disabled value="">Choisissez...</option>
       <option value="Afganistan">Afghanistan</option>
    <option value="Albania">Albania</option>
@@ -298,15 +306,15 @@
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationServer05" class="form-label">Code Postal</label>
-    <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+    <label for="validationServer05" class="form-label text-danger">Code Postal</label>
+    <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" >
     <div id="validationServer05Feedback" class="invalid-feedback">
       Please provide a valid zip.
     </div>
   </div>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+      <input class="form-check-input is-invalid text-danger" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback">
       <label class="form-check-label" for="invalidCheck3">
         Agree to terms and conditions
       </label>
@@ -316,7 +324,7 @@
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-danger" type="submit" name="signin_submit">S'inscrire</button>
   </div>
 </form>
     
