@@ -18,7 +18,22 @@ include ("./composant/header.php");
 
 include ("./composant/body.php");
 include ("./composant/footer.php");
-include ("./composant/categorie_films.php");
+
+
+if(isset($_GET["gallery"])){
+    include ("./composant/gallery.php");  
+}
+if(isset($_GET["search"])){
+    include ("./composant/search_list.php");  
+}
+if(isset($_GET["tarifs"])){
+    include ("./composant/tarifs.php");
+    
+}
+if(isset($_GET["intro"])){
+    include ("./composant/carroussel.php");
+    
+}
 if(isset($_GET["login"])){
     include ("./composant/formulaire_connexion.php");
 }
