@@ -314,7 +314,7 @@ include ("./Composant_php/create.php");
   </div>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input is-invalid text-danger" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback">
+      <input class="form-check-input is-invalid " type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback">
       <label class="form-check-label" for="invalidCheck3">
         Agree to terms and conditions
       </label>

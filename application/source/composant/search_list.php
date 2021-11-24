@@ -35,7 +35,7 @@ for ($i=0; $i<count($films);$i++){
             ?></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" id="<?php echo($films[$i]->original_title);?>"class="btn btn-sm  text-light btn-outline-secondary
+                  <button type="button" id="<?php echo($films[$i]->original_title);?>"class="btn btn-sm  text-light btn-outline-secondary"
                   data-bs-toggle="modal" data-bs-target="#player"> Play</button>
                   
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light">Review</button>
