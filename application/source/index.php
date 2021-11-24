@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<h1>HI</h1>
+<?php
+include 'config.php';
+?>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,3 +29,4 @@ include ("./composant/formulaire_connexion.php");
 
 
 
+>>>>>>> cadfb781f15dc632cc52e5723a5ef5c0a84ea484
