@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<h1>HI</h1>
-<?php
-include 'config.php';
-?>
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,14 +13,18 @@ include 'config.php';
 
 <?php
 include ("./composant/header.php");
+
 include ("./composant/body.php");
 include ("./composant/footer.php");
 include ("./composant/categorie_films.php");
-include ("./composant/formulaire_inscription.php");
-include ("./composant/formulaire_connexion.php");
+if(isset($_GET["login"])){
+    include ("./composant/formulaire_connexion.php");
+}
+if(isset($_GET["signup"])){
+    include ("./composant/formulaire_inscription.php");
+}
 ?>
 
 
 
 
->>>>>>> cadfb781f15dc632cc52e5723a5ef5c0a84ea484

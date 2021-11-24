@@ -17,8 +17,10 @@
           <input type="search" class="form-control form-control-dark" placeholder="Rechercher..." aria-label="Search">
         </form>
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Se connecter</button>
-          <button type="button" class="btn btn-warning">S'inscrire</button>
+          <form action="" method="get">
+          <input type="submit" name="login" value ="Se Connecter" class="btn btn-outline-light me-2"></input>
+          <input type="submit" name="signup" value ="S'inscrire" class="btn btn-warning"></input>
+          </form>
         </div>
       </div>
     </div>
