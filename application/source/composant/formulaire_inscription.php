@@ -1,7 +1,7 @@
 <?php
 include ("./Composant_php/create.php");
 ?>
-<form class="row bg-dark g-5" method="post">
+<form class="row bg-dark mt-5 g-5" method="post">
   <div class="col-md-4">
     <label for="validationServer01" class="form-label text-danger ">Username</label>
     <input type="text" name="Username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" >

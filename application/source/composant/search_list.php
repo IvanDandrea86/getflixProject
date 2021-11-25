@@ -35,11 +35,12 @@ for ($i=0; $i<count($films);$i++){
             ?></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" id="<?php echo($films[$i]->original_title);?>"class="btn btn-sm  text-light btn-outline-secondary"
-                  data-bs-toggle="modal" data-bs-target="#player"> Play</button>
-                  
+                  <form action="" method="get">
+                  <button type="submit" name="player" value="<?php echo($films[$i]->original_title);?>"class="btn btn-sm  text-light btn-outline-secondary">Play</button>
+                  <button type="submit" name="api">Api Trailer</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light">Review</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light">Overview</button>
+                  </form>
                 </div>
                 <i class="bi bi-star"></i>
                 <small class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
