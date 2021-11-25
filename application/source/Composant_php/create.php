@@ -70,7 +70,7 @@ if(count($error)>0){
     if($result== TRUE){
      
       $mode="New user added";
-      //  echo"New user added succesfully";
+        echo"New user added succesfully";
     }
     else{
       echo "Error:". $sql."<br>" .$conn->error;

@@ -20,7 +20,7 @@ if(isset($_GET["api"])){
     include ("./composant/apitrailer.php");  
 }
 if(isset($_GET["player"])){
-    include ("./composant/apitrailer.php");  
+    include ("./composant/player.php");  
 }
 if(isset($_GET["gallery"])){
     include ("./composant/gallery.php");  

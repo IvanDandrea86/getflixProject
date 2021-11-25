@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS GetFlix;
-USE GetFlix;
+CREATE DATABASE IF NOT EXISTS db;
+USE db;
 
 -- Structure of the "Users" table
 

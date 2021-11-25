@@ -7,7 +7,7 @@
   $baseURL = 'https://api.themoviedb.org/3/';
   $configData = null;
   $baseImageURL = null;
-  $APIKEY='cb949532e8d4edcc3566897450dff955';
+  $APIKEY=getenv("MovieDB_API_KEY");
   $keyword=str_replace(" ","%",$_GET["search"]);
 
   $api_url = $baseURL."search/movie?api_key=".$APIKEY."&query=".$keyword;
@@ -22,9 +22,6 @@ $films= $response_data->results;
 
 for ($i=0; $i<count($films);$i++){
   if(isset($films[$i]->poster_path)){
-  
-  include('player.php');
- 
 ?>
         <div class="col bg-danger">
           <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo($films[$i]->poster_path);?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
@@ -53,8 +50,6 @@ for ($i=0; $i<count($films);$i++){
         </div>
   <?php    }
   }
-
-  
       }
 ?>     
               </div>
