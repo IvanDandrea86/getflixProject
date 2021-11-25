@@ -1,8 +1,8 @@
 
     
-<main class="form-signin">
-  <form>
-    <img class="mb-4" src="./media/pop.png" alt="" width="72" height="57">
+<main class="form-signin col-4 ">
+  <form class="" method="post">
+    <img class="mb-4 align-self-center" src="./media/pop.png" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
