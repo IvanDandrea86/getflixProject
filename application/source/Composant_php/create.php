@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "./config.php";
 $username_err="";
 $error=array();
 if (isset($_POST["signin_submit"])){
@@ -11,7 +11,7 @@ if(empty(trim($_POST["Username"]))){
     array_push($error,$username_err);
   } 
   elseif(strlen(trim($_POST["Username"]))<6){
-    $username_err = "Username  must be at least 6 charchter";
+    $username_err = "Username  must be at least 6 character";
     array_push($error,$username_err);
   }
   else{
