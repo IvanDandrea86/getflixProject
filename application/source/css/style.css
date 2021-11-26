@@ -4,9 +4,26 @@
 
 #titre{
     color: red;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .dropdown-item:hover{
     background-color: black;
     color: white;
+}
+
+#contain{
+    background-image: url("../media/fondgetflix.jpg");
+    background-size: cover;
+    height: 100vh;
+   /* position: static; */
+}
+
+#bienvenue{
+    text-align: center;
+    color: red;
+    padding-top: 1cm;
+    text-decoration-line:underline;
+    font-family: 'Lobster', cursive;
 }

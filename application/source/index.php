@@ -45,8 +45,8 @@ if(isset($_GET["signup"])){
     include ("./composant/formulaire_inscription.php");
 }
 ?>
-</div>
-</div>
+<!-- </div>
+</div> -->
 <?php
 include ("./composant/footer.php");
 ?>

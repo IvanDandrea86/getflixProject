@@ -1,3 +1,5 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
 <div id="carouselExampleControls" class="carousel slide align-item-center" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -56,4 +58,5 @@ for($i=0;$i<5;$i++){
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div></div>
 </div>

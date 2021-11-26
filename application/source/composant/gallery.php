@@ -1,6 +1,6 @@
 
 <div class="container">
-<h1 class="text-center">Best of the week</h1>
+<h1 class="text-center text-dark">Best of the week</h1>
 <div class="row ">
     
                 <?php 
