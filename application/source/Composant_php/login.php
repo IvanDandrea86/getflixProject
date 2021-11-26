@@ -41,6 +41,7 @@ if (isset($_POST["login"])){
             array_push($login_error, $username_login_err);
         }else{
             $_SESSION['auth']=$_POST["Username"];
+         
             
         }
     }
