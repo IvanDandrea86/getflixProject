@@ -1,7 +1,6 @@
 <?php 
 
 include ('config.php');
-
 $username_login_err="";
 $password_login_err="";
 $login_error=array();
@@ -41,13 +40,12 @@ if (isset($_POST["login"])){
             array_push($login_error, $username_login_err);
         }else{
             $_SESSION['auth']=$_POST["Username"];
-            
         }
     }
     
+    
       
     }
-
 ?>
         
 
