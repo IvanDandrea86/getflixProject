@@ -3,7 +3,7 @@
 <div class="row ">
     
                 <?php 
-          $api_url = "https://api.themoviedb.org/3/trending/movie/week?api_key=cb949532e8d4edcc3566897450dff955";
+          $api_url = "https://api.themoviedb.org/3/trending/movie/week?api_key=".getenv("MovieDB_API_KEY");
           // Read JSON file
           $json_data = file_get_contents($api_url);
           // Decode JSON data into PHP array
@@ -44,7 +44,7 @@
 <div class="row ">
     
                 <?php 
-          $api_url = "https://api.themoviedb.org/3/discover/movie?api_key=cb949532e8d4edcc3566897450dff955&language=en-US&sort_by=vote_count.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
+          $api_url = "https://api.themoviedb.org/3/discover/movie?api_key=".getenv("MovieDB_API_KEY")."&language=en-US&sort_by=vote_count.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
           // Read JSON file
           $json_data = file_get_contents($api_url);
           // Decode JSON data into PHP array
@@ -86,7 +86,7 @@
 <div class="row ">
     
                 <?php 
-          $api_url = "https://api.themoviedb.org/3/discover/movie?api_key=cb949532e8d4edcc3566897450dff955&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=2021&with_watch_monetization_types=flatrate";
+          $api_url = "https://api.themoviedb.org/3/discover/movie?api_key=".getenv("MovieDB_API_KEY")."&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=2021&with_watch_monetization_types=flatrate";
           // Read JSON file
           $json_data = file_get_contents($api_url);
           // Decode JSON data into PHP array
