@@ -19,8 +19,9 @@ $response_data = json_decode($json_data);
 
 // All user data exists in 'data' object
 $films= $response_data->results;
-
+print_r($film);
 for ($i=0; $i<count($films);$i++){
+  
   if(isset($films[$i]->poster_path)){
 ?>
         <div class="col bg-danger">
@@ -28,7 +29,8 @@ for ($i=0; $i<count($films);$i++){
           <div class="card shadow-sm bg-dark">
           <div class="card-body">
             <p  class="card-text text-light"><?php if(($films[$i]->overview)==""){echo ("Overview not available.");
-            }else{  echo($films[$i]->overview);}
+            }else{  echo($films[$i]->overview);
+               echo($films[$i]->video);}
             ?></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">

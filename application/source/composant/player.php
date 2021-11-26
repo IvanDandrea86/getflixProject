@@ -27,7 +27,9 @@ if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
   $data =json_decode($response);
+  
   $title=$data->results[0]->id;
+  
 }
 
 $title_film=substr($title,7,9);
@@ -59,7 +61,7 @@ if ($err) {
   $data_video =json_decode($response1);
   $video=$data_video->resource;
   $video_dec=$video->videos[0]->id;
-  $video_link=substr($video_dec,9,10);
+  $video_link=substr($video_dec,9,12);
  }
 ?>
 <link rel="stylesheet" type="text/css" href="https://cdn.traileraddict.com/css/rembed.css">
@@ -71,7 +73,8 @@ if ($err) {
     webkitallowfullscreen="true" 
     mozallowfullscreen="true" 
     scrolling="no" 
-    class="embed-ta">
+    class="embed-ta"
+    >
   </iframe>   
 </div>
    

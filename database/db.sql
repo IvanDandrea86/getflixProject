@@ -22,7 +22,7 @@ CREATE TABLE comments (
   Comment text NOT NULL,
   Rating int(5) NOT NULL,
   Movie_Id int(10) NOT NULL,
-  User_id binary(16),  
+  User_id binary(18),  
   CONSTRAINT  fk_type
     FOREIGN KEY(User_id) 
         REFERENCES Users (Id)

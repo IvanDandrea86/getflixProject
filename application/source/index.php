@@ -16,6 +16,11 @@ include ("./composant/header.php");
 <div class="container">
     <div class=" col d-flex justify-content-center">
 <?php 
+// if (isset($_GET["date"])){
+//     $data=date("Y-n-d H:i:s");
+//   echo($data);
+// }
+
 if(isset($_GET["api"])){
     include ("./composant/apitrailer.php");  
 }

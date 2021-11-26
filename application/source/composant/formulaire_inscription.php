@@ -4,8 +4,11 @@ include ("./Composant_php/create.php");
 <form class="row bg-dark mt-5 g-5" method="post">
   <div class="col-md-4">
     <label for="validationServer01" class="form-label text-danger ">Username</label>
-    <input type="text" name="Username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" >
-    <span class="invalid-feedback"><?php echo $username_err; ?></span>
+    <input type="text" name="Username" class="form-control <?php 
+    echo (!empty($username_err)) ? 'is-invalid' : ''; 
+    echo (!empty($username_valid)) ? 'is-valid' :''?>" >
+    <span class="invalid-feedback"><?php 
+    echo $username_err; ?></span>
   </div>
   <div class="col-md-4">
     <label for="validationServer02" class="form-label text-danger">Nom</label>
