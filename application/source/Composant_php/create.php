@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "./config.php";
 $username_err="";
 $password_err="";
 $confirm_password_err="";
@@ -8,23 +8,25 @@ if (isset($_POST["signin_submit"])){
   
   //Control Error state Username
 if(empty(trim($_POST["Username"]))){
-      $username_err = "Please enter a username.";
-      array_push($error,$username_err);
-    } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["Username"]))){
-      $username_err = "Username can only contain letters, numbers, and underscores.";
-      array_push($error,$username_err);
-    } 
-    elseif(strlen(trim($_POST["Username"]))<6){
-      $username_err = "Username  must be at least 6 charchter";
-      array_push($error,$username_err);
-    }
-    else{
-      $sql= "SELECT * FROM Users WHERE Username='".$_POST["Username"]."'";
-    $result =$conn-> query($sql);
-    if($result->num_rows>0){
-      $username_err="Username alredy exist";
-      array_push($error,$username_err);
-    }
+
+    $username_err = "Please enter a username.";
+    array_push($error,$username_err);
+  } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["Username"]))){
+    $username_err = "Username can only contain letters, numbers, and underscores.";
+    array_push($error,$username_err);
+  } 
+  elseif(strlen(trim($_POST["Username"]))<6){
+    $username_err = "Username  must be at least 6 character";
+    array_push($error,$username_err);
+  }
+  else{
+    $sql= "SELECT * FROM Users WHERE Username='".$_POST["Username"]."'";
+  $result =$conn-> query($sql);
+  if($result->num_rows>0){
+    $username_err="Username alredy exist";
+    array_push($error,$username_err);
+  }
+  }
 
     }
 //Control Valid State Username
