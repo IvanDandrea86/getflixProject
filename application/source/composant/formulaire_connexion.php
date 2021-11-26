@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
     <?php
 include ("./Composant_php/login.php");
 ?>
+=======
+>>>>>>> 341c6cbe3bca6edecaba8100e144d01772c493d3
 
   <form class="form-signin col-4 bg-dark text-light mt-5 g-3" method="post">
     <img class="mb-4 align-self-center" src="./media/pop.png" alt="" width="72" height="57">

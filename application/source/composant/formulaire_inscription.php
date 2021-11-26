@@ -3,6 +3,20 @@ include ("./Composant_php/create.php");
 ?>
 <form class="row bg-dark mt-5 g-5" method="post">
   <div class="col-md-4">
+
+    <!-- Input Prenom -->
+    <label for="validationServer01" class="form-label text-white">Prénom</label>
+    <input type="text" class="form-control is-valid" id="validationServer01" value="Votre prénom" >
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    
+  <!-- input Nom -->
+    <label for="validationServer02" class="form-label">Nom</label>
+    <input type="text" class="form-control is-valid" id="validationServer02" value="Votre nom" >
+   <!-- input UserName -->
     <label for="validationServer01" class="form-label text-danger ">Username</label>
     <input type="text" name="Username" class="form-control <?php 
     echo (!empty($username_err)) ? 'is-invalid' : ''; 
@@ -18,7 +32,12 @@ include ("./Composant_php/create.php");
     </div>
   </div>
   <div class="col-md-4">
+
+
+     <!-- input username -->
+    <label for="validationServerUsername" class="form-label">Nom d'utilisateur</label>
     <label for="validationServerUsername" class="form-label text-danger">Prenom</label>
+
     <div class="input-group has-validation">
     
       <input type="text" class="form-control"   aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
@@ -26,7 +45,13 @@ include ("./Composant_php/create.php");
     </div>
   </div>
   <div class="col-md-4">
+
+
+     <!-- input email -->
+    <label for="validationServerUsername" class="form-label">Email</label>
+
     <label for="validationServerUsername" class="form-label text-danger">Email</label>
+
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend3">@</span>
       <input type="email" name="Email" class="form-control 
@@ -46,6 +71,10 @@ include ("./Composant_php/create.php");
                         <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
     </div>
   <div class="col-md-6">
+
+   <!-- input ville -->
+    <label for="validationServer03" class="form-label">Ville</label>
+    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
     <label for="validationServer03 text-danger" class="form-label">Ville</label>
     <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" >
     <div id="validationServer03Feedback" class="invalid-feedback">
@@ -53,6 +82,10 @@ include ("./Composant_php/create.php");
     </div>
   </div>
   <div class="col-md-3">
+
+   <!-- input pays -->
+    <label for="validationServer04" class="form-label">Pays</label>
+    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
     <label for="validationServer04 text-danger" class="form-label">Pays</label>
     <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback">
       <option selected disabled value="">Choisissez...</option>
@@ -309,6 +342,10 @@ include ("./Composant_php/create.php");
     </div>
   </div>
   <div class="col-md-3">
+
+   <!-- input code postal -->
+    <label for="validationServer05" class="form-label">Code Postal</label>
+    <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
     <label for="validationServer05" class="form-label text-danger">Code Postal</label>
     <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" >
     <div id="validationServer05Feedback" class="invalid-feedback">
@@ -317,7 +354,9 @@ include ("./Composant_php/create.php");
   </div>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input is-invalid " type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback">
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+      <label class="form-check-label text-white" for="invalidCheck3">
+     <input class="form-check-input is-invalid " type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback">
       <label class="form-check-label" for="invalidCheck3">
         Agree to terms and conditions
       </label>
@@ -327,9 +366,9 @@ include ("./Composant_php/create.php");
     </div>
   </div>
   <div class="col-12">
+   <!-- bouton d'envoie -->
+    <button class="btn btn-dark" id="buton" type="submit">Submit form</button>
     <button class="btn btn-danger" type="submit" name="signin_submit">S'inscrire</button>
   </div>
 </form>
-    
-</body>
-</html>
+  
