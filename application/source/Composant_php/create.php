@@ -1,5 +1,5 @@
 <?php
-include "./config.php";
+include "config.php";
 $username_err="";
 $password_err="";
 $confirm_password_err="";
@@ -91,7 +91,7 @@ if(count($error)>0){
     }
     $conn->close();
 }
-}
+
 
 ?>
 
