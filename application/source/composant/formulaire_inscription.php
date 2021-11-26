@@ -1,20 +1,25 @@
 
 <form class="row g-3">
   <div class="col-md-4">
-    <label for="validationServer01" class="form-label">Prénom</label>
-    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+    <!-- Input Prenom -->
+    <label for="validationServer01" class="form-label text-white">Prénom</label>
+    <input type="text" class="form-control is-valid" id="validationServer01" value="Votre prénom" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
+    
+  <!-- input nom -->
     <label for="validationServer02" class="form-label">Nom</label>
-    <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+    <input type="text" class="form-control is-valid" id="validationServer02" value="Votre nom" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
+
+     <!-- input username -->
     <label for="validationServerUsername" class="form-label">Nom d'utilisateur</label>
     <div class="input-group has-validation">
     
@@ -25,6 +30,8 @@
     </div>
   </div>
   <div class="col-md-4">
+
+     <!-- input email -->
     <label for="validationServerUsername" class="form-label">Email</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend3">@</span>
@@ -35,6 +42,8 @@
     </div>
   </div>
   <div class="col-md-6">
+
+   <!-- input ville -->
     <label for="validationServer03" class="form-label">Ville</label>
     <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
     <div id="validationServer03Feedback" class="invalid-feedback">
@@ -42,6 +51,8 @@
     </div>
   </div>
   <div class="col-md-3">
+
+   <!-- input pays -->
     <label for="validationServer04" class="form-label">Pays</label>
     <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
       <option selected disabled value="">Choisissez...</option>
@@ -298,6 +309,8 @@
     </div>
   </div>
   <div class="col-md-3">
+
+   <!-- input code postal -->
     <label for="validationServer05" class="form-label">Code Postal</label>
     <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
     <div id="validationServer05Feedback" class="invalid-feedback">
@@ -307,7 +320,7 @@
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-      <label class="form-check-label" for="invalidCheck3">
+      <label class="form-check-label text-white" for="invalidCheck3">
         Agree to terms and conditions
       </label>
       <div id="invalidCheck3Feedback" class="invalid-feedback">
@@ -316,9 +329,9 @@
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+
+   <!-- bouton d'envoie -->
+    <button class="btn btn-dark" id="buton" type="submit">Submit form</button>
   </div>
 </form>
-    
-</body>
-</html>
+  

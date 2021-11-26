@@ -29,6 +29,8 @@
           <li><a href="#" class="nav-link px-2 text-white">À propos</a></li>
         </ul>
 
+        <h2 id="titre">Getflix</h2>
+
         <form action="" method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
             
             <label for="site-search"></label>

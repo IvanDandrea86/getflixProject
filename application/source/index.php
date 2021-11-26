@@ -14,7 +14,7 @@
 include ("./composant/header.php");
 ?>
 <div class="container">
-    <div class=" col align-self-center">
+    <div class=" col justify-content-center">
 <?php 
 include ("./composant/body.php");
 
