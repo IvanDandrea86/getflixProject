@@ -4,7 +4,7 @@
     <div class="row bg danger">
     
     <?php 
-$api_url = "https://api.themoviedb.org/3/trending/movie/week?api_key=cb949532e8d4edcc3566897450dff955";
+$api_url = "https://api.themoviedb.org/3/trending/movie/week?api_key=".getenv("MovieDB_API_KEY");
 // Read JSON file
 $json_data = file_get_contents($api_url);
 // Decode JSON data into PHP array
