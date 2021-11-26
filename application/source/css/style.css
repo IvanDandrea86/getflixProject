@@ -16,7 +16,7 @@
 #contain{
     background-image: url("../media/fondgetflix.jpg");
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
    /* position: static; */
 }
 
@@ -26,4 +26,8 @@
     padding-top: 1cm;
     text-decoration-line:underline;
     font-family: 'Lobster', cursive;
+}
+.form-border{
+ 
+    border-radius: 4%;
 }

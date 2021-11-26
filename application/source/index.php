@@ -1,52 +1,60 @@
 <?php 
+
 session_start();
 ?>
 
 
 <?php
+require_once("./composant/head.html");
 include ("./Composant_php/create.php");
 include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
-include ("./composant/header.php");
+include ("./composant/navbar.php");
 ?>
-<div class="container">
-    <div class=" col d-flex justify-content-center">
+<main id="contain">    
 <?php 
 
 
 if(isset($_SESSION["auth"])){
-   
-    include ("./composant/gallery.php");  
-}
-if(isset($_GET["api"])){
-    include ("./composant/apitrailer.php");  
-}
-if(isset($_GET["player"])){
-    include ("./composant/player.php");  
-}
-if(isset($_GET["gallery"])){
-    include ("./composant/gallery.php");  
-}
-if(isset($_GET["search"])){
-    include ("./composant/search_list.php");  
-}
-if(isset($_GET["tarifs"])){
-    include ("./composant/tarifs.php");
+
+    if(isset($_GET["gallery"])){
+  
+        include ("./composant/gallery.php"); 
+    }
+        if(isset($_GET["api"])){
+        include ("./composant/apitrailer.php");  
+        header("Location : index.php");
+    }
+    if(isset($_GET["player"])){
+        include ("./composant/player.php");  
+    }
+    if(isset($_GET["intro"])){
+        include ("./composant/carroussel.php");  
+    }
+    
+    if(isset($_GET["search"])){
+        include ("./composant/search_list.php");  
+        header("Location : index.php");
+    } 
+}else{
+    if(isset($_GET["login"])){
+        require_once ("./composant/formulaire_connexion.php");
+    }
+    if(isset($_GET["tarifs"])){
+        include ("./composant/tarifs.php");    
+    }
+    if(isset($_GET["signup"])){
+        include ("./composant/formulaire_inscription.php");
+    }
+    
+    
     
 }
-if(isset($_GET["intro"])){
-    include ("./composant/carroussel.php");
-    
-}
-if(isset($_GET["login"])){
-    require_once ("./composant/formulaire_connexion.php");
-}
-if(isset($_GET["signup"])){
-    include ("./composant/formulaire_inscription.php");
-}
+
+
+
 ?>
-<!-- </div>
-</div> -->
+</main>
 <?php
 include ("./composant/footer.php");
 ?>
