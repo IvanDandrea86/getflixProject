@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +13,7 @@
 </head>
 <body class="bg-danger">
 <?php
-
+include ("./Composant_php/logout.php");
 include ("./composant/header.php");
 ?>
 <div class="container">

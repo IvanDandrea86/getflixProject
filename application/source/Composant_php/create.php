@@ -1,5 +1,5 @@
 <?php
-include "./config.php";
+include "config.php";
 $username_err="";
 $password_err="";
 $confirm_password_err="";

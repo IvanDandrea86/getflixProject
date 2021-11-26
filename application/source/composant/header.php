@@ -36,11 +36,30 @@
                    aria-label="Search through site content">
 </form>
        
-        <div class="text-end">
-          <form action="" method="get">
-          <button type="submit" name="login" class="btn btn-outline-light me-2">Se connecter</button>
-          <button type="submit" name="signup" class="btn btn-danger">S'inscrire</button>
-          </form>
+<div class="text-end">
+  <?php if(isset($_SESSION["auth"])):
+            
+            ?>
+            <form action="" method="post">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <p class="nav-link  mb-0 text-white"><i class="bi bi-house-door"></i> Welcome <?php echo $_SESSION["auth"];?></p>                    
+                    <li>
+                        <a class="nav-link  text-white" aria-current="page" href="#"><i class="bi bi-gear"></i> Settings </a>
+                    </li>  
+                    <li> 
+                        <button type="submit" class="btn btn-secondary  text-white" value="logout" name="logout"><i class="bi bi-arrow-right-square"></i> Log out </button>  
+                    </li>
+                </ul> 
+                </form>
+                
+                <?php  else :
+            ?>
+
+<form action="" method="get">
+<button type="submit" name="login" class="btn btn-outline-light me-2">Se connecter</button>
+<button type="submit" name="signup" class="btn btn-danger">S'inscrire</button>
+</form>
+         <?php endif; ?>
         </div>
       </div>
     </div>
