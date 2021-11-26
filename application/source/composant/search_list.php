@@ -7,7 +7,7 @@
   $baseURL = 'https://api.themoviedb.org/3/';
   $configData = null;
   $baseImageURL = null;
-  $APIKEY='cb949532e8d4edcc3566897450dff955';
+  $APIKEY=getenv("MovieDB_API_KEY");
   $keyword=str_replace(" ","%",$_GET["search"]);
 
   $api_url = $baseURL."search/movie?api_key=".$APIKEY."&query=".$keyword;
@@ -19,27 +19,27 @@ $response_data = json_decode($json_data);
 
 // All user data exists in 'data' object
 $films= $response_data->results;
-
+print_r($film);
 for ($i=0; $i<count($films);$i++){
-  if(isset($films[$i]->poster_path)){
   
-  include('player.php');
- 
+  if(isset($films[$i]->poster_path)){
 ?>
         <div class="col bg-danger">
           <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo($films[$i]->poster_path);?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
           <div class="card shadow-sm bg-dark">
           <div class="card-body">
             <p  class="card-text text-light"><?php if(($films[$i]->overview)==""){echo ("Overview not available.");
-            }else{  echo($films[$i]->overview);}
+            }else{  echo($films[$i]->overview);
+               echo($films[$i]->video);}
             ?></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" id="<?php echo($films[$i]->original_title);?>"class="btn btn-sm  text-light btn-outline-secondary
-                  data-bs-toggle="modal" data-bs-target="#player"> Play</button>
-                  
+                  <form action="" method="get">
+                  <button type="submit" name="player" value="<?php echo($films[$i]->original_title);?>"class="btn btn-sm  text-light btn-outline-secondary">Play</button>
+                  <button type="submit" name="api">Api Trailer</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light">Review</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light">Overview</button>
+                  </form>
                 </div>
                 <i class="bi bi-star"></i>
                 <small class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
@@ -52,8 +52,6 @@ for ($i=0; $i<count($films);$i++){
         </div>
   <?php    }
   }
-
-  
       }
 ?>     
               </div>

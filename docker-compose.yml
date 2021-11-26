@@ -23,7 +23,8 @@ services:
     restart: always
     volumes:
       - ./database:/docker-entrypoint-initdb.d/
-      - getflix_data:/var/lib/mysql
+      - ./database/getflix_data:/var/lib/mysql
+      - ./database/backupdir:/backup
     env_file:
       - ./docker.env
     networks:

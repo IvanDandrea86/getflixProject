@@ -1,10 +1,12 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
 <div id="carouselExampleControls" class="carousel slide align-item-center" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
     <div class="row bg danger">
     
     <?php 
-$api_url = "https://api.themoviedb.org/3/trending/movie/week?api_key=cb949532e8d4edcc3566897450dff955";
+$api_url = "https://api.themoviedb.org/3/trending/movie/week?api_key=".getenv("MovieDB_API_KEY");
 // Read JSON file
 $json_data = file_get_contents($api_url);
 // Decode JSON data into PHP array
@@ -18,7 +20,7 @@ for($i=0;$i<5;$i++){
 <div class="card shadow-sm">
 <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo($films[$i]->poster_path);?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
 <div class="card-body">
-  <p  class="card-text">List Elem</p>
+  <p  class="card-text"></p>
   <div class="d-flex justify-content-between align-items-center">
     <div class="btn-group">
       <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
@@ -56,4 +58,5 @@ for($i=0;$i<5;$i++){
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div></div>
 </div>
