@@ -1,6 +1,7 @@
 <?php
-include ("./Composant_php/create.php");
+include("./Composant_php/create.php");
 ?>
+
    <form class="bg-dark text-light p-3 g-5 mt-5" action="" method="post">
                     <div class="form-group">
                         <label for="Username" class="col-form-label">Username:</label>
