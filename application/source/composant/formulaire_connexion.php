@@ -4,7 +4,7 @@ include ("./Composant_php/login.php");
 ?>
 
   <form class="form-signin col-4 bg-dark text-light mt-5 g-3" method="post">
-    <img class="mb-4 align-self-center" src="./media/pop.png" alt="" width="72" height="57">
+    <img class="mb-4 align-self-center" src="./media/pop.png" alt="popcorn" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
     <div class="form-floating">
     <label for="Username" class="col-form-label">Username:</label>
