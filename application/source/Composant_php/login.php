@@ -1,6 +1,6 @@
 <?php 
-session_start();
-require_once './config.php';
+
+include ('config.php');
 
 $username_login_err="";
 $password_login_err="";
@@ -31,17 +31,26 @@ if (isset($_POST["login"])){
         $password_login_err = "Password must have atleast 6 characters!";
         array_push($error, $password_login_err);
     }
-    //Controle que l'user et le Password sont bon et démarrer la session
-    if(count($login_error)==0){
-        $sql = "SELECT * FROM Users WHERE Username= '".$_POST["Username"]. "' and Password= '".$_POST["Password"]."'";
-        $result=$conn->query($sql);
-        if($result-> num_rows==0){
+    
+    // Controll On user password
+        if(count($login_error)==0){
+            $sql = "SELECT * FROM Users WHERE Username= '".$_POST["Username"]. "' and User_Password= '".$_POST["Password"]."'";
+            $result=$conn->query($sql);
+            if($result->num_rows==0){
             $password_login_err="Wrong password!";
             array_push($login_error, $username_login_err);
         }else{
             $_SESSION['auth']=$_POST["Username"];
+            
         }
     }
+    
+      
+    }
 
-}
 ?>
+        
+
+
+
+    
