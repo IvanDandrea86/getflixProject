@@ -1,18 +1,15 @@
 #buton:hover{
-    background-color: red;
+    background-color: #dc3545;
 }
-
 #titre{
-    color: red;
+    color: #dc3545;
     padding-left: 10px;
     padding-right: 10px;
 }
-
 .dropdown-item:hover{
     background-color: black;
     color: white;
 }
-
 #contain{
     background-image: url("../media/fondgetflix.jpg");
     background-size: cover;
@@ -20,14 +17,20 @@
    /* position: static; */
 }
 
-#bienvenue{
-    text-align: center;
-    color: red;
-    padding-top: 1cm;
-    text-decoration-line:underline;
-    font-family: 'Lobster', cursive;
-}
 .form-border{
- 
     border-radius: 4%;
+}
+
+/*------
+Settings
+-------*/
+.nav-link{
+    color:#dc3545;
+}
+.nav-link:hover{
+    color:white;
+}
+.nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff!important;
+    background-color: #dc3545  !important;
 }

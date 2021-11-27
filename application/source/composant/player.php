@@ -65,7 +65,7 @@ if ($err) {
  }
 ?>
 <link rel="stylesheet" type="text/css" href="https://cdn.traileraddict.com/css/rembed.css">
-<div class="d-flex justify-content-center">
+
 <div class="outer-embed-ta ">
 
    <iframe width="100%" 
@@ -78,7 +78,7 @@ if ($err) {
     >
   </iframe>   
 </div>
-</div>
+
    
      
     

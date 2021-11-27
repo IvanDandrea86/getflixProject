@@ -1,6 +1,6 @@
-<main>
-    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-      <div class="col">
+
+    <div class="row row-cols-1 row-cols-md-3 mt mb-3 text-center align-items-center d-flex">
+      <div class="col ">
         <div class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3 text-white bg-danger border-primary">
             <h4 class="my-0 fw-normal">Free</h4>
@@ -54,4 +54,4 @@
     </div>
 
    
-  </main>
+  

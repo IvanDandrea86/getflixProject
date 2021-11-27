@@ -1,5 +1,5 @@
 
-<body class="bg-danger">
+
 <header class="p-3 bg-dark text-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -46,9 +46,9 @@
             ?>
             <form action="" method="post">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                  <p class="nav-link  mb-0 text-white"><i class="bi bi-house-door"></i> Welcome <?php echo $_SESSION["auth"];?></p>                    
+                  <p class="nav-link  mb-0 text-white"><i class="bi bi-house-door"></i> Welcome <?php echo $_SESSION["auth"]." ".$_SESSION["id"]  ;?></p>                    
                     <li>
-                        <a class="nav-link  text-white" aria-current="page" href="#"><i class="bi bi-gear"></i> Settings </a>
+                        <a class="nav-link  text-white" aria-current="page" href="?setting"><i class="bi bi-gear"></i> Settings </a>
                     </li>  
                     <li> 
                         <button type="submit" class="btn btn-secondary  text-white" value="logout" name="logout"><i class="bi bi-arrow-right-square"></i> Log out </button>  

@@ -39,7 +39,15 @@ if (isset($_POST["login"])){
             $password_login_err="Wrong password!";
             array_push($login_error, $username_login_err);
         }else{
-            $_SESSION['auth']=$_POST["Username"];
+            $sql = "SELECT * FROM Users WHERE Username= '".$_POST["Username"]. "' and User_Password= '".$_POST["Password"]."'";
+            $result=$conn->query($sql);
+            while($row=$result->fetch_assoc()){
+                $username=$row["Username"];
+                $id=$row["Id"];
+            }
+            $_SESSION['auth']=$username;
+            $_SESSION['id']=$id;
+            
         }
     }
     
