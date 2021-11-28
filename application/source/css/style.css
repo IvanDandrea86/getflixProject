@@ -10,8 +10,8 @@
     background-color: black;
     color: white;
 }
-#contain{
-    background-image: url("../media/fondgetflix.jpg");
+#bg_img{
+    background-image: url("../media/cine0.jpg");
     background-size: cover;
     height: 80vh;
    /* position: static; */

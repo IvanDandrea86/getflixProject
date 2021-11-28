@@ -16,7 +16,7 @@ include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
 include ("./composant/navbar.php");
 ?>
-<main id="contain">  
+<main id="bg_img">  
 <?php 
 
 if ($_SESSION["auth"]=="admin"){
@@ -87,7 +87,8 @@ include ("./composant/footer.php");
 <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>    
+    crossorigin="anonymous"></script>  
+    <script src="./js/script.js"></script>  
 </body>
 </html>
 

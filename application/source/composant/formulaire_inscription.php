@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center">
-   <form class="bg-dark text-light p-3 g-5 mt-5 form-border" action="" method="post">
+   <form class="bg-dark text-light p-3 g-3 mt-1 form-border" action="" method="post">
    <div class="d-flex justify-content-center">
       <img class=" " src="./media/pop.png" alt="popcorn" width="72" height="57">
     </div>

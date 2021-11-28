@@ -95,36 +95,36 @@
                         <form method="post">
                             <div class="form-group">
                                 <label for="FristName">Firstname</label>
-                                <input type="text" class="form-control" id="FristName_setting" aria-describedby="fullNameHelp" placeholder="Enter your firstname" value="<?php echo($firstname);?>">
+                                <input type="text" class="form-control" name="FristName_setting" aria-describedby="fullNameHelp" placeholder="Enter your firstname" value="<?php echo($firstname);?>">
                                 <small id="fullNameHelp" class="form-text text-muted">Your name may appear around here where you are mentioned. You can change or remove it at any time.</small>
                             </div>
                             <div class="form-group">
                                 <label for="LastName">Lastname</label>
-                                <input type="text" class="form-control" id="FirstName_setting" aria-describedby="fullNameHelp" placeholder="Enter your lastname" value="<?php echo($lastname);?>">
+                                <input type="text" class="form-control" name="LastName_setting" aria-describedby="fullNameHelp" placeholder="Enter your lastname" value="<?php echo($lastname);?>">
                                 <small id="fullNameHelp" class="form-text text-muted">Your name may appear around here where you are mentioned. You can change or remove it at any time.</small>
                             </div>
                             <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="text" class="form-control" 
-                                id="Username_settings" aria-describedby="usernameHelp" placeholder="Enter your username" value="<?php echo($username);?>">
+                                name="Username_setting" aria-describedby="usernameHelp" placeholder="Enter your username" value="<?php echo($username);?>">
                                 <small id="usernameHelp" class="form-text text-muted">After changing your username, your old username becomes available for anyone else to claim.</small>
                             </div>
                             <div class="form-group">
                                 <label for="username">Email</label>
                                 <input type="email" class="form-control" 
-                                id="Email_settings" aria-describedby="usernameHelp" placeholder="Enter your username" value="<?php echo($email);?>">
+                                name="Email_setting" aria-describedby="usernameHelp" placeholder="Enter your username" value="<?php echo($email);?>">
                                 <small id="usernameHelp" class="form-text text-muted">After changing your username, your old username becomes available for anyone else to claim.</small>
                             </div>
                             <div class="form-group">
                                 <label for="bio">Your Bio</label>
-                                <textarea class="form-control autosize" id="Bio" placeholder="Write something about you" 
+                                <textarea class="form-control autosize" name="Bio_setting" placeholder="Write something about you" 
                                 style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 62px;">
                                 <?php echo($bio);?></textarea>
                             </div>
     
                             <div class="form-group">
                                 <label for="location">Location</label>
-                                <input type="text" class="form-control" id="Location" placeholder="Enter your location" 
+                                <input type="text" class="form-control" name="Location_setting" placeholder="Enter your location" 
                                 value="<?php echo($location);?>">
                             </div>
                             <div class="form-group small text-muted">
@@ -186,10 +186,13 @@
                         <hr>
                         <form>
                             <div class="form-group">
+                                <form action="" method="post">
                                 <label class="d-block">Change Password</label>
-                                <input type="text" class="form-control" placeholder="Enter your old password">
-                                <input type="text" class="form-control mt-1" placeholder="New password">
-                                <input type="text" class="form-control mt-1" placeholder="Confirm new password">
+                                <input type="text" class="form-control" name="old_pass" placeholder="Enter your old password">
+                                <input type="text" class="form-control mt-1" name="new_pass" placeholder="New password">
+                                <input type="text" class="form-control mt-1" name="confirm_new_pass"placeholder="Confirm new password">
+                                <button type="submit" name="changePass"class="btn btn-danger">Confirm</button>    
+                            </form>
                             </div>
                         </form>
                         <hr>
