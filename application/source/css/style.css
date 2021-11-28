@@ -1,3 +1,7 @@
+.info_link {
+    text-decoration: none;
+    all:unset;
+}
 #buton:hover{
     background-color: #dc3545;
 }

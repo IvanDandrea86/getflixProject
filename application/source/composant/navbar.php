@@ -4,18 +4,24 @@
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <div class="preacceuil"><a href="?preacc" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="./media/pop.png" alt="">
+          <img class="image-fluid" src="./media/pop.png" alt="">
         </a>
         </div>
 
         <h2 id="titre">Getflix</h2>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="?intro" class="nav-link px-2 text-white">Accueil</a></li>
+          <li><a href="
+          <?php 
+          echo (isset($_SESSION["auth"]) ? "?user_gallery":"?intro" );
+          ?>
+          " class="nav-link px-2 text-white">Accueil</a></li>
+          <?php   if(isset($_SESSION["auth"])){ ?>
           <li><div class="dropdown">
   <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
    Catégories
   </button>
+  
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
   <li><a class="dropdown-item" href="?gallery">Suggested</a></li>
       
@@ -26,20 +32,27 @@
     <li><a class="dropdown-item" href="#">Fantasy</a></li>
     <li><a class="dropdown-item" href="#">Sci-Fi</a></li>
   </ul>
-</div><li>
+          </div>
+<?php
+  }?>
+
+<li>
+<?php if(!isset($_SESSION["auth"])){ ?>
           <li><a href="?tarifs" class="nav-link px-2 text-white">Tarifs</a></li>
+          <?php } ?>
           <li><a href="#" class="nav-link px-2 text-white">FAQ</a></li>
           <li><a href="#" class="nav-link px-2 text-white">À propos</a></li>
         </ul>
 
         
-
+        <?php if(isset($_SESSION["auth"])){
+            ?>
         <form action="" method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-            
             <label for="site-search"></label>
             <input type="search" id="site-search" name="search"
                    aria-label="Search through site content">
-</form>
+        </form>
+        <?php } ?>
        
 <div class="text-end">
   <?php if(isset($_SESSION["auth"])):

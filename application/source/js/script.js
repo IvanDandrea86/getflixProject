@@ -11,5 +11,5 @@ window.onload = function () {
         var i = Math.floor((Math.random() * 2));
         bg_image.style.backgroundImage = 'url("' + BackgroundImg[i] + '")';
     }
-    window.setInterval(changeImage, 7000);
+    window.setInterval(changeImage, 10000);
 }
