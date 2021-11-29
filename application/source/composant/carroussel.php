@@ -15,16 +15,16 @@ $films= $response_data->results;
 for($i=0;$i<5;$i++){
 ?>
 
-<div class="col bg-danger">
-<div class="card shadow-sm">
+<div class="col">
+<div class="card sh border-0">
 <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo($films[$i]->poster_path);?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
 <div class="card-body">
   <p  class="card-text"></p>
   <div class="d-flex justify-content-between align-items-center">
     <div class="btn-group">
-      <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary">Review</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary">Overview</button>
+      <button type="button" class="btn btn-sm btn-danger">Play</button>
+      <button type="button" class="btn btn-sm btn-warning">Review</button>
+      <button type="button" class="btn btn-sm btn-info">Overview</button>
     </div>
     <i class="bi bi-star"></i>
 
@@ -42,11 +42,11 @@ for($i=0;$i<5;$i++){
 }?>
 </div>
     </div>
-    <div class="carousel-item">
-      <img src="./media/spidey.jpg" width="100%" height="500" class="d-block w-100 img-fluid" alt="...">
+    <div class="carousel-item" align="center">
+      <img src="./media/spidey.jpg" class="d-flex img-fluid" alt="...">
     </div>
-    <div class="carousel-item">
-      <img src="./media/hobbit.jpeg" width="100%" height="500" class="d-block w-100 img-fluid" alt="...">
+    <div class="carousel-item" align="center", height= 10cm, width= 7cm>
+      <img src="./media/hobbit.jpeg" class="d-flex img-fluid" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

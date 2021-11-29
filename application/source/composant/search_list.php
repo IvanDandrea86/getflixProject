@@ -35,7 +35,7 @@ for ($i=0; $i<count($films);$i++){
                 <div class="btn-group">
                   <form action="" method="get">
                   <button type="submit" name="player" value="<?php echo($films[$i]->id);?>"class="btn btn-sm  text-light btn-outline-secondary">Play</button>
-                
+                  
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light">Review</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light">Overview</button>
                   </form>
