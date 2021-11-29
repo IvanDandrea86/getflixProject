@@ -9,7 +9,7 @@
         </div>
 
         <h2 id="titre">Getflix</h2>
-
+    <?php if($_SESSION["auth"] != "root"){ ?>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="
           <?php 
@@ -52,7 +52,7 @@
             <input type="search" id="site-search" name="search"
                    aria-label="Search through site content">
         </form>
-        <?php } ?>
+        <?php } }?>
        
 <div class="text-end">
   <?php if(isset($_SESSION["auth"])):

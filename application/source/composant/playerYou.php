@@ -14,7 +14,6 @@ $video= $response_data->results[0]->key;
 echo(strlen($video));
 ?>
 <div class="container">
-
 <div class="row">
     <div class="col-8 bg-danger d-flex p-2 shadow-lg  align-items-center justify-content-center">
 <iframe width="100%" height="500" 

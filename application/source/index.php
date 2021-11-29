@@ -17,11 +17,11 @@ include ("./composant/navbar.php");
 <main id="bg_img">  
 <?php 
 
-if ($_SESSION["auth"]=="admin"){
+if ($_SESSION["auth"]=="root"){
     include("./composant/admin.php");
 }
-if(isset($_SESSION["auth"])){
 
+if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
 
     // INSERT WELCOME LOGIN PAGE
 
@@ -47,7 +47,8 @@ if(isset($_SESSION["auth"])){
         include ("./composant/carroussel.php");  
     }
 }
-else{ 
+elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
+
     if(isset($_GET["intro"])){
         include ("./composant/pre-acceuil.php");  
     }
@@ -78,6 +79,9 @@ include("./composant/popUpDelete.php");
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>  
     <script src="./js/script.js"></script>  
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+    <script  src="./js/valid_status.js"></script>
+    <script  src="./js/chart.js"></script>
 </body>
 </html>
 

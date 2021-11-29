@@ -1,14 +1,15 @@
 <?php
 include "config.php";
-$username_err="";
-$password_err="";
-$confirm_password_err="";
+
+$username_err=" ";
+$email_err=" ";
+$password_err=" ";
+$confirm_password_err=" ";
 $error=array();
 if (isset($_POST["signin_submit"])){
   
   //Control Error state Username
 if(empty(trim($_POST["Username"]))){
-
     $username_err = "Please enter a username.";
     array_push($error,$username_err);
   } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["Username"]))){
@@ -20,21 +21,16 @@ if(empty(trim($_POST["Username"]))){
     array_push($error,$username_err);
   }
   else{
-    $sql= "SELECT * FROM Users WHERE Username='".$_POST["Username"]."'";
-  $result =$conn-> query($sql);
-  if($result->num_rows>0){
-    $username_err="Username alredy exist";
-    array_push($error,$username_err);
-  }
+      $sql= "SELECT * FROM Users WHERE Username='".$_POST["Username"]."'";
+      $result =$conn-> query($sql);
+    if($result->num_rows>0){
+      $username_err="Username alredy exist";
+      array_push($error,$username_err);
+    }
+  
   }
 
     }
-//Control Valid State Username
-// if(!empty(trim($_POST["Username"]))) {
-
-
-
-
 
 // Control error State Password
 if(empty(trim($_POST["Password"]))){
@@ -91,8 +87,9 @@ if(count($error)>0){
       $('#popUpSucces').modal('show'); 
       })
       </script>
+      
     <?php
-    
+    unset($_GET["signup"]);
     
     }
     else{
