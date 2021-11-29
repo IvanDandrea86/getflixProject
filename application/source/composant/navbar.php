@@ -23,19 +23,35 @@
   </button>
   
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-  <li><a class="dropdown-item" href="?gallery">Suggested</a></li>
-      
-  <li><a class="dropdown-item" href="#">Horror</a></li>
-    <li><a class="dropdown-item" href="#">Thriller</a></li>
-    <li><a class="dropdown-item" href="#">Humour</a></li>
-    <li><a class="dropdown-item" href="#">Comédie</a></li>
-    <li><a class="dropdown-item" href="#">Fantasy</a></li>
-    <li><a class="dropdown-item" href="#">Sci-Fi</a></li>
+  <form action="" method="get">
+  <?php
+  $baseURL = 'https://api.themoviedb.org/3/';
+
+  $APIKEY=getenv("MovieDB_API_KEY");
+  $keyword=str_replace(" ","%",$_GET["search"]);
+  $api_url = $baseURL."genre/movie/list?api_key=".$APIKEY."&language=en-US";
+// Read JSON file
+$json_data = file_get_contents($api_url);
+// Decode JSON data into PHP array
+$response_data = json_decode($json_data);
+// All user data exists in 'data' object
+$genres=$response_data->genres;
+for ($i=0; $i<count($genres);$i++){
+?>
+  <li>
+    <button type=submit class="dropdown-item"  
+      name="genres"
+      value="<?php echo $genres[$i]->id;?>">
+    <?php echo $genres[$i]->name;?></button></li>
+    
+    <?php
+  }?>
+  </form>
   </ul>
           </div>
-<?php
-  }?>
 
+          <?php
+  }?>
 <li>
 <?php if(!isset($_SESSION["auth"])){ ?>
           <li><a href="?tarifs" class="nav-link px-2 text-white">Tarifs</a></li>

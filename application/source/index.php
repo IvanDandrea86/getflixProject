@@ -40,8 +40,10 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     }
     
     if(isset($_GET["search"])){
-        include ("./composant/search_list.php");  
-        
+        include ("./composant/search_list.php");     
+    }
+    if(isset($_GET["genres"])){
+        include ("./composant/search_genres.php");     
     }
     if(isset($_GET["user_gallery"])){
         include ("./composant/carroussel.php");  
