@@ -33,6 +33,14 @@
     .form-border {
         border-radius: 4%;
     }
+
+    .card-body{
+       background-color: black;
+    }
+
+    .carousel-inner{
+        padding-top: 1cm;
+    }
     /*------
 Settings
 -------*/
