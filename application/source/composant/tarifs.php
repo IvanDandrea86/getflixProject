@@ -38,7 +38,7 @@
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-light">
           <div class="card-header py-3 text-white bg-danger border-light">
-            <h4 class="my-0 fw-normal">Enterprise</h4>
+            <h4 class="my-0 fw-normal">Unlimited</h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">€29<small class="text-muted fw-light">/mois</small></h1>
