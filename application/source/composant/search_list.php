@@ -9,14 +9,11 @@
   $baseImageURL = null;
   $APIKEY=getenv("MovieDB_API_KEY");
   $keyword=str_replace(" ","%",$_GET["search"]);
-
   $api_url = $baseURL."search/movie?api_key=".$APIKEY."&query=".$keyword;
 // Read JSON file
 $json_data = file_get_contents($api_url);
-
 // Decode JSON data into PHP array
 $response_data = json_decode($json_data);
-
 // All user data exists in 'data' object
 $films= $response_data->results;
 print_r($film);
