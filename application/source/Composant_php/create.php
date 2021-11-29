@@ -79,12 +79,21 @@ if(count($error)>0){
     $firstname= $_POST["FirstName"];
     $lastname= $_POST["LastName"];
     $date=date("Y-n-d H:i:s");
-    $sql="INSERT INTO Users VALUES ( UUID_SHORT(),'$username','$email','$password','$lastname','$firstname','$date')";
+    $sql="INSERT INTO Users VALUES ( UUID_SHORT(),'$username','$email','$password','$lastname','$firstname',NULL,NULL,'$date')";
     $result =$conn->query($sql);
     if($result== TRUE){
-     
       $mode="New user added";
-        echo"New user added succesfully";
+      
+      ?>
+      <script>
+      $(window).ready(function(){
+        <?php $mode="New user added"; ?>
+      $('#popUpSucces').modal('show'); 
+      })
+      </script>
+    <?php
+    
+    
     }
     else{
       echo "Error:". $sql."<br>" .$conn->error;

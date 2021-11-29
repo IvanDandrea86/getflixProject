@@ -1,63 +1,83 @@
 <?php 
 session_start();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Getflix</title>
-</head>
 <body class="bg-danger">
-<?php
-include ("./Composant_php/logout.php");
-include ("./composant/header.php");
-?>
-<div class="container">
-    <div class=" col d-flex justify-content-center">
-<?php 
-// if (isset($_GET["date"])){
-//     $data=date("Y-n-d H:i:s");
-//   echo($data);
-// }
 
-if(isset($_GET["api"])){
-    include ("./composant/apitrailer.php");  
+
+<?php
+include("./composant/head.html");
+include("./Composant_php/delete.php");
+
+include ("./Composant_php/create.php");
+include ("./Composant_php/updateUserInfo.php");
+include ("./Composant_php/login.php");
+include ("./Composant_php/logout.php");
+include ("./composant/navbar.php");
+?>
+<main id="bg_img">  
+<?php 
+
+if ($_SESSION["auth"]=="admin"){
+    include("./composant/admin.php");
 }
-if(isset($_GET["player"])){
-    include ("./composant/player.php");  
-}
-if(isset($_GET["gallery"])){
-    include ("./composant/gallery.php");  
-}
-if(isset($_GET["search"])){
-    include ("./composant/search_list.php");  
-}
-if(isset($_GET["tarifs"])){
-    include ("./composant/tarifs.php");
+if(isset($_SESSION["auth"])){
+
+
+    // INSERT WELCOME LOGIN PAGE
+
+    if(isset($_GET["setting"])){
+        include ("./composant/userSettings.php"); 
+    } 
+    if(isset($_GET["gallery"])){
+        include ("./composant/gallery.php"); 
+    }
+        if(isset($_GET["api"])){
+        include ("./composant/apitrailer.php");  
+        header("Location : index.php");
+    }
+    if(isset($_GET["player"])){
+        include ("./composant/playerYou.php");  
+    }
     
+    if(isset($_GET["search"])){
+        include ("./composant/search_list.php");  
+        
+    }
+    if(isset($_GET["user_gallery"])){
+        include ("./composant/carroussel.php");  
+    }
 }
-if(isset($_GET["intro"])){
-    include ("./composant/carroussel.php");
-    
-}
-if(isset($_GET["login"])){
-    include ("./composant/formulaire_connexion.php");
-}
-if(isset($_GET["signup"])){
-    include ("./composant/formulaire_inscription.php");
+else{ 
+    if(isset($_GET["intro"])){
+        include ("./composant/pre-acceuil.php");  
+    }
+        elseif(isset($_GET["login"])){
+        require_once ("./composant/formulaire_connexion.php");
+    }
+        elseif(isset($_GET["tarifs"])){
+        include ("./composant/tarifs.php");    
+    }
+        elseif(isset($_GET["signup"])){
+        include ("./composant/formulaire_inscription.php");
+    }
+    else{
+        include ("./composant/pre-acceuil.php");  
+    }   
 }
 ?>
-</div>
-</div>
+</main>
 <?php
 include ("./composant/footer.php");
+include("./composant/popupSucces.php");
+include("./composant/popUpDelete.php");
+
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>  
+    <script src="./js/script.js"></script>  
 </body>
 </html>
 
