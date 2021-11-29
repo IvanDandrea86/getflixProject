@@ -1,5 +1,5 @@
-<div class="album py-5 bg-danger">
-    <div class="container">
+<div class="album py-5  d-flex justify-content-center">
+    <div class="container ">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <?php
@@ -24,27 +24,24 @@ for ($i=0; $i<count($films);$i++){
   
   if(isset($films[$i]->poster_path)){
 ?>
-        <div class="col bg-danger">
+        <div class="col" style="max-width:250px;">
           <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo($films[$i]->poster_path);?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
           <div class="card shadow-sm bg-dark">
           <div class="card-body">
             <p  class="card-text text-light"><?php if(($films[$i]->overview)==""){echo ("Overview not available.");
-            }else{  echo($films[$i]->overview);
-               echo($films[$i]->video);}
+            }else{  echo($films[$i]->overview);}
             ?></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <form action="" method="get">
-                  <button type="submit" name="player" value="<?php echo($films[$i]->original_title);?>"class="btn btn-sm  text-light btn-outline-secondary">Play</button>
-                  <button type="submit" name="api">Api Trailer</button>
+                  <button type="submit" name="player" value="<?php echo($films[$i]->id);?>"class="btn btn-sm  text-light btn-outline-secondary">Play</button>
+                
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light">Review</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light">Overview</button>
                   </form>
                 </div>
                 <i class="bi bi-star"></i>
-                <small class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                </svg> 
+                <small class="text-muted">
                 </small>
               </div>
             </div>

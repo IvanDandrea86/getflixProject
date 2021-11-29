@@ -1,8 +1,9 @@
-<?php
-include("./Composant_php/create.php");
-?>
-
-   <form class="bg-dark text-light p-3 g-5 mt-5" action="" method="post">
+<div class="d-flex justify-content-center">
+   <form class="bg-dark text-light p-3 g-3 mt-1 form-border" action="" method="post">
+   <div class="d-flex justify-content-center">
+      <img class=" " src="./media/pop.png" alt="popcorn" width="72" height="57">
+    </div>
+    <h2 id="titre"class="text-center">Getflix</h2>
                     <div class="form-group">
                         <label for="Username" class="col-form-label">Username:</label>
                         <input type="text" name="Username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" id="username">
@@ -32,8 +33,9 @@ include("./Composant_php/create.php");
                         <input type="text" class="form-control" name="LastName" id="lastname"></input>
                     </div>
                     <div class="modal-footer">
-                        <p>Alredy have an account? <a href="#" class="link ">Login Here</a></p>
+                        <p>Alredy have an account? <a href="?login" class="link ">Login Here</a></p>
                         
                         <button type="submit" class="btn btn-danger"  name="signin_submit" id="signupBtn">Submit</button>
                     </div>
                 </form>
+                </div>

@@ -1,5 +1,4 @@
-<div class="container">
-    <div class="d-flex justify-content-center">
+
 <div id="carouselExampleControls" class="carousel slide align-item-center" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -44,10 +43,10 @@ for($i=0;$i<5;$i++){
 </div>
     </div>
     <div class="carousel-item">
-      <img src="./media/spidey.jpg" width="100%" height="500" class="d-block w-100" alt="...">
+      <img src="./media/spidey.jpg" width="100%" height="500" class="d-block w-100 img-fluid" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="./media/hobbit.jpeg" width="100%" height="500" class="d-block w-100" alt="...">
+      <img src="./media/hobbit.jpeg" width="100%" height="500" class="d-block w-100 img-fluid" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -58,5 +57,4 @@ for($i=0;$i<5;$i++){
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div></div>
 </div>
