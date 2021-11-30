@@ -44,6 +44,16 @@ if (isset($_POST["login"])){
             while($row=$result->fetch_assoc()){
                 $username=$row["Username"];
                 $id=$row["Id"];
+                $mode=$username." logged in";
+      
+                ?>
+                <script>
+                $(window).ready(function(){
+                $('#popUpSucces').modal('show'); 
+                })
+                </script>
+                
+              <?php
             }
             $_SESSION['auth']=$username;
             $_SESSION['id']=$id;

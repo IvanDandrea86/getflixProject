@@ -1,4 +1,6 @@
-
+<!-- 
+SIGN IN FORM PAGE 
+-->
 <div class="d-flex justify-content-center">
 <form class="bg-dark text-light p-3 g-5 mt-5 form-border" action="" method="post">
     <div class="d-flex justify-content-center">
@@ -7,11 +9,13 @@
     <h2 id="titre"class="text-center">Getflix</h2>
     <div class="form-group ">
     <label for="Username" class="col-form-label">Username:</label>
+    <!-- Input with php injected to control invaid status -->
     <input type="text" name="Username" class="form-control <?php echo (!empty($username_login_err)) ? 'is-invalid' : ''; ?>" id="username_login">
     <span class="invalid-feedback"><?php echo $username_login_err; ?></span>
 </div>
     <div class="form-group"> 
     <label for="password" class="col-form-label">Password:</label>
+    <!-- Input with php injected to control invaid status -->
     <input type="password" class="form-control <?php echo (!empty($password_login_err)) ? 'is-invalid' : ''; ?>" name="Password" id="password_login"></input>
     <span class="invalid-feedback"><?php echo $password_login_err; ?></span>
       </div>

@@ -1,4 +1,6 @@
 <?php
+
+// UPDATE USER INFO ON SETTINGS SECTION
 include "config.php";
  
  if(isset($_POST['update'])) {
@@ -17,7 +19,16 @@ include "config.php";
     $result =$conn->query($sql);
 
     if ($result ==TRUE){
-        echo "Record updatet succesfully"; 
+        $mode=$username." info updated";
+      
+        ?>
+        <script>
+        $(window).ready(function(){
+        $('#popUpSucces').modal('show'); 
+        })
+        </script>
+        
+      <?php
     }
     else{
         echo "Error: ".$sql."<br>".$conn->error;
