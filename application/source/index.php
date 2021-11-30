@@ -14,6 +14,7 @@ include ("./Composant_php/updateUserInfo.php");
 include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
 include ("./composant/navbar.php");
+include ("./composant/FAQ.php");
 ?>
 <main id="bg_img">  
 <?php 
