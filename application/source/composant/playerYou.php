@@ -1,3 +1,4 @@
+
 <?php   
 $movieId=$_GET["player"];
 $video=getMovieId($movieId);
@@ -27,5 +28,10 @@ allowfullscreen></iframe>
 </div>
 <div class="row">
 <div class="col-8 d-flex bg-danger shadow-lg  align-items-center justify-content-center">COMMENTs BOX HERE</div>
+
 </div>
+
+        </div>
+
+    </div>
 </div>
