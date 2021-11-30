@@ -8,7 +8,6 @@
           <img class="image-fluid" src="./media/pop.png" alt="">
         </a>
       </div>
-
       <h2 id="titre">Getflix</h2>
       <?php
       // CONTROL ON ADMIN CONNECTION
@@ -63,7 +62,7 @@
                 ?>
             <li><a href="?tarifs" class="nav-link px-2 text-white">Tarifs</a></li>
           <?php } ?>
-          <li><a href="#" class="nav-link px-2 text-white">FAQ</a></li>
+          <li><a href="?faq" class="nav-link px-2 text-white">FAQ</a></li>
           <li><a href="#" class="nav-link px-2 text-white">À propos</a></li>
         </ul>
         <?php 

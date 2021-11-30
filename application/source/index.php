@@ -14,7 +14,7 @@ include ("./Composant_php/updateUserInfo.php");
 include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
 include ("./composant/navbar.php");
-include ("./composant/FAQ.php");
+
 ?>
 <main id="bg_img">  
 <?php 
@@ -42,6 +42,9 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     if(isset($_GET["user_gallery"])){
         include ("./composant/carroussel.php");  
     }
+    if(isset($_GET["faq"])){
+        include ("./composant/FAQ.php"); 
+    }
 }
 // ROUTING FOR UNRESIGERED SESSION
 elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
@@ -49,6 +52,11 @@ elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     if(isset($_GET["intro"])){
         include ("./composant/pre-acceuil.php");  
     }
+    if(isset($_GET["faq"])){
+        include ("./composant/FAQ.php"); 
+    }
+   
+   
         elseif(isset($_GET["login"])){
         require_once ("./composant/formulaire_connexion.php");
     }
