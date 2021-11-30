@@ -137,7 +137,7 @@ ADMIN DASHBOARD PAGE
                                         ?>
                                                 <tr>
                                                     <td><?php echo $row['Id_comments']; ?></td>
-                                                    <td><?php echo $row['Comment']; ?></td>
+                                                    <td><?php echo $row['Comment_text']; ?></td>
                                                     <td><?php echo $row['Movie_ref']; ?></td>
                                                     <td><?php echo $row['User_id']; ?></td>
                                                     <td>

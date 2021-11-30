@@ -10,7 +10,7 @@ function getDetail($id){
 }
 
 function getMovieId($id){
-    $baseURL = 'https://api.themoviedb.org/3/';
+$baseURL = 'https://api.themoviedb.org/3/';
 $APIKEY=getenv("MovieDB_API_KEY");
 $api_url = $baseURL."movie/".$id."/videos?api_key=".$APIKEY;
 $json_data = file_get_contents($api_url);

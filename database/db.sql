@@ -37,8 +37,8 @@ INSERT INTO films VALUES(11,"Star Wars",50);
 --
 CREATE TABLE comments (
   Id_comments binary(36) NOT NULL PRIMARY KEY,
-  Comment text NOT NULL,
-  Date_comment datetime
+  Comment_text varchar(255) NOT NULL,
+  Date_comment datetime,
   Rating int(5) NOT NULL,
   Movie_ref int(10) NOT NULL,
   User_id bigint(18) NOT NULL,  
@@ -49,10 +49,10 @@ CREATE TABLE comments (
           ON UPDATE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO comments VALUES(UUID(),"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil rerum libero veritatis ratione numquam illum. Perferendis animi, distinctio rem sequi ad unde voluptatem blanditiis, repellat doloribus harum laboriosam labore autem.
-   ",10,50,99541559912955905);
-   INSERT INTO comments VALUES(UUID(),"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil rerum libero veritatis ratione numquam illum. Perferendis animi, distinctio rem sequi ad unde voluptatem blanditiis, repellat doloribus harum laboriosam labore autem.
-   ",10,50,99541881901285377);
---
+-- INSERT INTO comments VALUES(UUID(),"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil rerum libero veritatis ratione numquam illum. Perferendis animi, distinctio rem sequi ad unde voluptatem blanditiis, repellat doloribus harum laboriosam labore autem.",
+--    "2021-9-28 18:00:00",10,50,99541559912955905);
+--    INSERT INTO comments VALUES(UUID(),"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil rerum libero veritatis ratione numquam illum. Perferendis animi, distinctio rem sequi ad unde voluptatem blanditiis, repellat doloribus harum laboriosam labore autem.
+--    ","2021-9-28 18:00:00",10,50,99541881901285377);
+
 
 
