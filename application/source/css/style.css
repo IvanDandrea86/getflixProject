@@ -27,11 +27,18 @@
         background-image: url("../media/cine0.jpg");
         background-size: cover;
         height: 80vh;
-        /* position: static; */
     }
     
     .form-border {
         border-radius: 4%;
+    }
+
+    .card-body{
+       background-color: black;
+    }
+
+    .carousel-inner{
+        padding-top: 1cm;
     }
     /*------
 Settings

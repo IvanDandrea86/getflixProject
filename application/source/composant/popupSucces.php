@@ -1,3 +1,6 @@
+<!-- 
+  POP UP MODAL TO CONFIRM SUCCES OPERATION 
+-->
 <div class="modal fade" id="popUpSucces" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content bg-dark">
