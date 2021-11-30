@@ -33,7 +33,7 @@ services:
   ## PhpMyAdmin
   myadmin:
     image: phpmyadmin/phpmyadmin:4.8.1
-    container_name: ai-phpmyadmin
+    container_name: getflix-phpmyadmin
     ports:
       - 8081:80
     restart: always
