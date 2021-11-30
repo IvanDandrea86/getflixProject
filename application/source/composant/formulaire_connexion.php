@@ -26,7 +26,7 @@ SIGN IN FORM PAGE
       </label>
     </div>
     <p>Not yet registered? <a href="?signup" class="link ">Register here Here</a></p>
-
+    <p>Forgot password? <a href="?login" class="link ">Click Here</a></p>
     <button class="w-100 btn btn-lg btn-danger" type="submit" name="login" >Sign in</button>
   </form>
   </div>

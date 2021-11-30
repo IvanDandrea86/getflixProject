@@ -15,7 +15,7 @@
        <div class="col">
             <div class="card shadow-sm">
             <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo($films[$i]->poster_path);?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
-            <div class="card-body bg-dark">
+            <div class="card-body" id="film-card">
               <p  class="card-text"><?php echo($films[$i]->original_title);?></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">

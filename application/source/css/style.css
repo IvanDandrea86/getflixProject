@@ -3,10 +3,6 @@
         cursor: pointer;
     }
     
-    .info_link:hover {
-        color: #fff;
-        transform: scale(0.5);
-    }
     
     #buton:hover {
         background-color: #dc3545;
@@ -26,14 +22,15 @@
     #bg_img {
         background-image: url("../media/cine0.jpg");
         background-size: cover;
-        height: 80vh;
+        background-repeat: repeat-x;
+     height: 100vh;
     }
     
     .form-border {
         border-radius: 4%;
     }
 
-    .card-body{
+    #film-card{
        background-color: black;
     }
 

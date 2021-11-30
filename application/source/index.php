@@ -13,7 +13,6 @@ include ("./Composant_php/create.php");
 include ("./Composant_php/updateUserInfo.php");
 include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
-
 include ("./composant/navbar.php");
 
 ?>
@@ -51,13 +50,11 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
 elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
 
     if(isset($_GET["intro"])){
-        include ("./composant/pre-acceuil.php");  
+        require_once ("./composant/pre-acceuil.php");  
     }
     if(isset($_GET["faq"])){
         include ("./composant/FAQ.php"); 
     }
-   
-   
         elseif(isset($_GET["login"])){
         require_once ("./composant/formulaire_connexion.php");
     }
@@ -68,7 +65,7 @@ elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
         include ("./composant/formulaire_inscription.php");
     }
     else{
-        include ("./composant/pre-acceuil.php");  
+        require_once("./composant/pre-acceuil.php");  
     }   
 }
 ?>
@@ -88,6 +85,7 @@ include("./composant/popUpDelete.php");
     <script src="./js/script.js"></script>  
     <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
     <script  src="./js/valid_status.js"></script>
+    <script  src="./js/FAQ.js"></script>
     <script  src="./js/chart.js"></script>
 </body>
 </html>

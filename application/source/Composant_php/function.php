@@ -1,4 +1,5 @@
-<?php   
+<?php  
+
 function getDetail($id){
     $baseURL = 'https://api.themoviedb.org/3/';
     $APIKEY=getenv("MovieDB_API_KEY");
@@ -37,5 +38,15 @@ function searchTitle($key){
     $response_data = json_decode($json_data);
     $films= $response_data->results;
     return $films;
+}
+
+function getUserName($id){
+    include 'config.php' ;
+    $sql = "SELECT *FROM Users WHERE `Users`.`Id`=$id";
+    $result = $conn->query($sql);
+    if ($result->num_rows ==1) {
+      $row = $result->fetch_assoc();
+        return $row["Username"];
+}
 }
 ?>
