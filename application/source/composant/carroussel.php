@@ -62,7 +62,6 @@
             <div class="card shadow-sm">
               <img class=".img-fluid" width="100%" height="350" role="img" src="./media/hobbit.jpeg" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
               <div class="card-body">
-                <p class="card-text"></p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
@@ -71,7 +70,6 @@
                   </div>
                   <i class="bi bi-star"></i>
                 </div>
-              </div>
             </div>
           </div>
         </div>

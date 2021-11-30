@@ -23,7 +23,10 @@ allowfullscreen></iframe>
             ?></p>
   </div>
 </div></div>
-<div class="row"></div>    
+<div class="row">
+<p> AJOUTER COMMENT ELEMENT
+</p>
+</div>    
 </div>
 </div>
 <div class="row">
