@@ -1,4 +1,6 @@
 <?php
+
+// UPDATE USER INFO ON SETTINGS SECTION
 include "config.php";
  
  if(isset($_POST['update'])) {

@@ -5,9 +5,10 @@ session_start();
 
 
 <?php
+// INCLUDE HEAD FUNCTIONS AND NAVBAR
 include("./composant/head.html");
+include('./Composant_php/function.php');
 include("./Composant_php/delete.php");
-
 include ("./Composant_php/create.php");
 include ("./Composant_php/updateUserInfo.php");
 include ("./Composant_php/login.php");
@@ -16,29 +17,21 @@ include ("./composant/navbar.php");
 ?>
 <main id="bg_img">  
 <?php 
-
+// CONTROL IF IS SESSION ADMIN
 if ($_SESSION["auth"]=="root"){
     include("./composant/admin.php");
 }
-
+//ROUTING FOR USER SESSION
 if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
-
-    // INSERT WELCOME LOGIN PAGE
-
     if(isset($_GET["setting"])){
         include ("./composant/userSettings.php"); 
     } 
     if(isset($_GET["gallery"])){
         include ("./composant/gallery.php"); 
     }
-        if(isset($_GET["api"])){
-        include ("./composant/apitrailer.php");  
-        header("Location : index.php");
-    }
     if(isset($_GET["player"])){
         include ("./composant/playerYou.php");  
     }
-    
     if(isset($_GET["search"])){
         include ("./composant/search_list.php");     
     }
@@ -49,6 +42,7 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
         include ("./composant/carroussel.php");  
     }
 }
+// ROUTING FOR UNRESIGERED SESSION
 elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
 
     if(isset($_GET["intro"])){
@@ -69,12 +63,14 @@ elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
 }
 ?>
 </main>
+<!-- INCLUDE FOOTER AND MODALS -->
 <?php
 include ("./composant/footer.php");
 include("./composant/popupSucces.php");
 include("./composant/popUpDelete.php");
 
 ?>
+<!-- INCLUDE JAVASCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"

@@ -4,19 +4,11 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <?php
       if(isset($_GET["genres"])){
-  $baseURL = 'https://api.themoviedb.org/3/';
-  $keyword=strval($_GET["genres"]);      
-  $APIKEY=getenv("MovieDB_API_KEY");
-  $api_url = $baseURL."discover/movie?api_key=".$APIKEY."&language=en-US&sort_by=popularity.desc&include_adult=false&vote_average.gte=6&with_genres=".$keyword;
-// Read JSON file
-$json_data = file_get_contents($api_url);
-// Decode JSON data into PHP array
-$response_data = json_decode($json_data);
-// All user data exists in 'data' object
-$films= $response_data->results;
-for ($i=0; $i<count($films);$i++){
-  if(isset($films[$i]->poster_path)){
-?>
+      $keyword=strval($_GET["genres"]);  
+      $films=getGenresList($keyword);
+      for ($i=0; $i<count($films);$i++){
+      if(isset($films[$i]->poster_path)){
+      ?>
         <div class="col" style="max-width:250px;">
           <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo($films[$i]->poster_path);?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
           <div class="card shadow-sm bg-dark">

@@ -1,3 +1,9 @@
+<!-- 
+
+ADMIN DASHBOARD PAGE 
+
+-->
+
 <div class="container">
     <div class="row g-1">
         <div class=" col-md-4 d-none d-md-block">
@@ -21,7 +27,7 @@
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>Statistic
                         </a>
-                      
+
                     </nav>
                 </div>
             </div>
@@ -53,107 +59,108 @@
                     <div class="tab-pane active" id="all_users">
                         <h6>Users List</h6>
                         <hr>
-                        <?php 
-                        $sql ="SELECT *FROM Users";
-                        $result =$conn->query($sql);
+                        <?php
+                        /**
+                         * SQL QUERY TO GET A LIST OF ALL USERS
+                         */
+                        $sql = "SELECT *FROM Users";
+                        $result = $conn->query($sql);
                         ?>
                         <div class="container text-center">
-        <h2>Users List</h2>
-    <div class="col ">
-    <table class="table table-dark table-striped text-white">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Username</th>
-                <th scope="col">Email</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                if($result->num_rows>0){
-                    while($row= $result->fetch_assoc()){
-                     ?>
-                     <tr scope="row">
-                      <td><?php echo $row['Id'];?></td>
-                      <td><?php echo $row['Username'];?></td>
-                      <td><?php echo $row['Email'];?></td>
-                      <td><?php echo $row['FirstName'];?></td>
-                      <td><?php echo $row['LastName'];?></td>  
-                      <td><?php echo $row['Registration'];?></td>
-                      <td>
-                         <a href="update.php?PersonID=
-                        <?php echo $row["PersonID"];?>
-                        " class="btn btn-secondary">Edit</a> 
-                        &nbsp;
-                        <a href="index.php?delete=<?php echo $row["PersonID"];?>" class="btn btn-danger">Delete</a>
-                    </td>
-                    </tr>    
-                   <?php }
-                }     
-           ?>
-        </tbody>
-    </table>
-    </div>
-    </div>
-                        
+                            <h2>Users List</h2>
+                            <div class="col ">
+                                <table class="table table-dark table-striped text-white">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Username</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                        ?>
+                                                <tr scope="row">
+                                                    <td><?php echo $row['Id']; ?></td>
+                                                    <td><?php echo $row['Username']; ?></td>
+                                                    <td><?php echo $row['Email']; ?></td>
+                                                    <td><?php echo $row['FirstName']; ?></td>
+                                                    <td><?php echo $row['LastName']; ?></td>
+                                                    <td><?php echo $row['Registration']; ?></td>
+                                                    <td>
+                                                        <a href="update.php?PersonID=
+                        <?php echo $row["PersonID"]; ?>
+                        " class="btn btn-secondary">Edit</a>
+                                                        &nbsp;
+                                                        <a href="index.php?delete=<?php echo $row["PersonID"]; ?>" class="btn btn-danger">Delete</a>
+                                                    </td>
+                                                </tr>
+                                        <?php }
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="tab-pane" id="all_comments">
                         <h6>Comments List</h6>
                         <hr>
-                        <?php 
-                        $sql ="SELECT *FROM comments";
-                        $result =$conn->query($sql);
+                        <?php
+                        /**
+                         * SQL QUERY TO GET A LIST OF ALL COMMENTS
+                         */
+                        $sql = "SELECT *FROM comments";
+                        $result = $conn->query($sql);
                         ?>
                         <div class="container text-center">
-        <h2>Users List</h2>
-    <div class="col ">
-    <table class="table text-white">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Comment</th>
-                <th>Movie reference</th>
-                <th>User ID</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                if($result->num_rows>0){
-                    while($row= $result->fetch_assoc()){
-                     ?>
-                     <tr>
-                      <td><?php echo $row['Id_comments'];?></td>
-                      <td><?php echo $row['Comment'];?></td>
-                      <td><?php echo $row['Movie_ref'];?></td>  
-                      <td><?php echo $row['User_id'];?></td>
-                      <td>
-                         <a href="update.php?PersonID=
-                        <?php echo $row["PersonID"];?>
-                        " class="btn btn-secondary">Edit</a> 
-                        &nbsp;
-                        <a href="index.php?delete=<?php echo $row["PersonID"];?>" class="btn btn-danger">Delete</a>
-                    </td>
-                    </tr>    
-                   <?php }
-                }     
-           ?>
-        </tbody>
-    </table>
-    </div>
-    </div>
+                            <h2>Users List</h2>
+                            <div class="col ">
+                                <table class="table text-white">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Comment</th>
+                                            <th>Movie reference</th>
+                                            <th>User ID</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                        ?>
+                                                <tr>
+                                                    <td><?php echo $row['Id_comments']; ?></td>
+                                                    <td><?php echo $row['Comment']; ?></td>
+                                                    <td><?php echo $row['Movie_ref']; ?></td>
+                                                    <td><?php echo $row['User_id']; ?></td>
+                                                    <td>
+                                                        <a href="update.php?PersonID=
+                        <?php echo $row["PersonID"]; ?>
+                        " class="btn btn-secondary">Edit</a>
+                                                        &nbsp;
+                                                        <a href="index.php?delete=<?php echo $row["PersonID"]; ?>" class="btn btn-danger">Delete</a>
+                                                    </td>
+                                                </tr>
+                                        <?php }
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane" id="statistics">
                         <h6>Statistics</h6>
                         <hr>
-                        
-                        <div id="chart_target" style="width:42vw; height:40vh" ></div>
-                       
-                      
-                    
-                    
-                    
+                        <!-- CHART TARGET -->
+                        <div id="chart_target" style="width:42vw; height:40vh"></div>
                     </div>
 
-</div>
+                </div>
