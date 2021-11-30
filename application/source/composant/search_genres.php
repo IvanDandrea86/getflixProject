@@ -3,11 +3,11 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <?php
-      if(isset($_GET["search"])){
-        $keyword=str_replace(" ","%",$_GET["search"]);
-        $films=searchTitle($keyword);
-        for ($i=0; $i<count($films);$i++){
-        if(isset($films[$i]->poster_path)){
+      if(isset($_GET["genres"])){
+      $keyword=strval($_GET["genres"]);  
+      $films=getGenresList($keyword);
+      for ($i=0; $i<count($films);$i++){
+      if(isset($films[$i]->poster_path)){
       ?>
         <div class="col" style="max-width:250px;">
           <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo($films[$i]->poster_path);?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">

@@ -1,4 +1,6 @@
 <?php
+
+// UPDATE PASSWORD !!! NOT YER FINISHED
 include "config.php";
  
  if(isset($_POST['update'])) {
