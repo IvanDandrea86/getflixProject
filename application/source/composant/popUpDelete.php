@@ -1,3 +1,6 @@
+<!-- 
+  POP UP MODAL TO CONFIRM DELETE 
+-->
 <div class="modal  fade" id="popUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content bg-dark">

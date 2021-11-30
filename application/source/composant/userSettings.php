@@ -1,5 +1,7 @@
+<!-- USER SETTINGS DASHBOARD -->
 <?php
-     $sql = "SELECT * FROM Users WHERE Username= '".$_SESSION["auth"]."'";
+    // SQLQUERY TO GET INFO BASED ON LOGGED IN USER
+      $sql = "SELECT * FROM Users WHERE Username= '".$_SESSION["auth"]."'";
      $result=$conn->query($sql);
             while($row=$result->fetch_assoc()){
                 $username=$row["Username"];
@@ -11,9 +13,7 @@
                 $location=$row["User_location"];
                 $date_reg=$row["Registration"];
             }
-
 ?>
-
 <div class="container">
     <div class="row g-1">
         <div class=" col-md-4 d-none d-md-block">
@@ -253,5 +253,4 @@
             </div>
         </div>
     </div>
-
 </div>

@@ -1,6 +1,6 @@
 
 <?php
-
+// LOG OUT SESSION CONTROL
 if(isset($_POST["logout"])){
 $mode=$_SESSION['auth']." disconnected ";
 ?>
