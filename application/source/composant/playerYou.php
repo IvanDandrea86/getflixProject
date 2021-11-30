@@ -27,7 +27,18 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="row">
-<div class="col-8 d-flex bg-danger shadow-lg  align-items-center justify-content-center">COMMENTs BOX HERE</div>
+<div class="col-8 d-flex bg-danger shadow-lg  align-items-center justify-content-center"><div class="panel panel-default">
+<div class="panel-heading">Submit Your Comments</div>
+  <div class="panel-body">
+  	<form method="post">
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">Subject</label>
+	    <textarea name="subject" class="form-control" rows="3"></textarea>
+	  </div>
+	  <button type="submit" name= "submit_comment" class="btn btn-primary">Submit</button>
+	</form>
+  </div>
+</div></div>
 
 </div>
 
