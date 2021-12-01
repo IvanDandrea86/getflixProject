@@ -39,9 +39,18 @@
     .carousel-inner{
         padding-top: 1cm;
     }
-    /*------
-Settings
--------*/
+
+    #ques1{
+        background-color: black;
+        color: red;
+        /* border-color: red; */
+    }
+
+    #ques1:hover{
+        background-color: red;
+        color: black;
+    }
+
     
     .nav-link {
         color: #dc3545;
