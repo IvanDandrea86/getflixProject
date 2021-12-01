@@ -33,16 +33,16 @@ if (isset($_POST["login"])){
     
     // Controll On user password
         if(count($login_error)==0){
-            $sql = "SELECT * FROM Users WHERE Username= '".$_POST["Username"]. "' and User_Password= '".$_POST["Password"]."'";
-            $result=$conn->query($sql);
-            if($result->num_rows==0){
-            $password_login_err="Wrong password!";
-            array_push($login_error, $username_login_err);
-        }else{
-            $sql = "SELECT * FROM Users WHERE Username= '".$_POST["Username"]. "' and User_Password= '".$_POST["Password"]."'";
+
+            $sql = "SELECT * FROM Users WHERE Username= '".$_POST["Username"]."'";
             $result=$conn->query($sql);
             while($row=$result->fetch_assoc()){
-                $username=$row["Username"];
+                if(!password_verify($_POST["Password"], $row["User_Password"]))  {   
+            $password_login_err="Wrong password!";
+            array_push($login_error, $username_login_err);
+                }
+                else{
+                    $username=$row["Username"];
                 $id=$row["Id"];
                 $mode=$username." logged in";
       
@@ -57,13 +57,13 @@ if (isset($_POST["login"])){
             }
             $_SESSION['auth']=$username;
             $_SESSION['id']=$id;
-            
+                }
+            }
         }
-    }
     
     
       
-    }
+    
 ?>
         
 
