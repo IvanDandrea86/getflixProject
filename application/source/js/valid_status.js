@@ -37,9 +37,10 @@ window.addEventListener("load", () => {
         }
     })
     passwordInput.addEventListener("keyup", () => {
+        var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,})");
         var pass = passwordInput.value
-        let count = pass.length
-        if (count >= 6) {
+        // let count = pass.length
+        if (pass.match(strongRegex)) {
             passwordInput.classList.add("is-valid");
             passwordInput.classList.remove("is-invalid");
             document.getElementById("valid-pass").innerHTML = "This is valid password"

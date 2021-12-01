@@ -1,14 +1,13 @@
 <!-- 
   NAVBAR
  -->
-<header class="p-3 bg-dark text-white">
+<header class="p-3 bg-dark text-white sticky-top">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <div class="preacceuil"><a href="?preacc" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
           <img class="image-fluid" src="./media/pop.png" alt="">
         </a>
       </div>
-
       <h2 id="titre">Getflix</h2>
       <?php
       // CONTROL ON ADMIN CONNECTION
@@ -32,7 +31,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <form action="" method="get">
                     <?php
-                    // SQL QUERY TO GET ALL GENRES AVIABLE
+                    // API QUERY TO GET ALL GENRES AVAIABLE
                     $baseURL = 'https://api.themoviedb.org/3/';
                     $APIKEY = getenv("MovieDB_API_KEY");
                     $keyword = str_replace(" ", "%", $_GET["search"]);
@@ -63,7 +62,7 @@
                 ?>
             <li><a href="?tarifs" class="nav-link px-2 text-white">Tarifs</a></li>
           <?php } ?>
-          <li><a href="#" class="nav-link px-2 text-white">FAQ</a></li>
+          <li><a href="?faq" class="nav-link px-2 text-white">FAQ</a></li>
           <li><a href="#" class="nav-link px-2 text-white">À propos</a></li>
         </ul>
         <?php 
@@ -83,7 +82,12 @@
         ?>
           <form action="" method="post">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <p class="nav-link  mb-0 text-white"><i class="bi bi-house-door"></i> Welcome <?php echo $_SESSION["auth"]; ?></p>
+                <div class="d-flex justify-content-center">
+                <img class="rounded-circle" src="https://eu.ui-avatars.com/api/?name=<?php
+                  echo($_SESSION["auth"]);
+                  ?>" width="40">
+              <p class="nav-link  mb-0 text-white">  Welcome <?php echo $_SESSION["auth"]; ?></p>
+              </div>
               <li>
                 <a class="nav-link  text-white" aria-current="page" href="?setting"><i class="bi bi-gear"></i> Settings </a>
               </li>

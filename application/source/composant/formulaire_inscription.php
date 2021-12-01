@@ -53,7 +53,7 @@ SIGNUP FORM PAGE
         </div>
         <div class="modal-footer">
             <p>Alredy have an account? <a href="?login" class="link ">Login Here</a></p>
-
+           
             <button type="submit" class="btn btn-danger" name="signin_submit" id="signupBtn">Submit</button>
         </div>
     </form>
