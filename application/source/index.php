@@ -2,8 +2,6 @@
 session_start();
 ?>
 <body class="bg-danger">
-
-
 <?php
 // INCLUDE HEAD FUNCTIONS AND NAVBAR
 include("./composant/head.html");

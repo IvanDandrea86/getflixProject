@@ -37,9 +37,7 @@ INSERT INTO films VALUES(11,"Star Wars",50);
 --
 CREATE TABLE comments (
   Id_comments binary(36) NOT NULL PRIMARY KEY,
-
   Comment_text varchar(255) NOT NULL,
-
   Date_comment datetime,
   Rating int(5) NOT NULL,
   Movie_ref int(10) NOT NULL,
