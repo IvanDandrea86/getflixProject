@@ -24,7 +24,6 @@ allowfullscreen></iframe>
   </div>
 </div></div>
 <div class="row">
-<p> AJOUTER COMMENT ELEMENT
 </p>
 </div>    
 </div>
