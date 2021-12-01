@@ -60,6 +60,7 @@ include('./Composant_php/add_comment.php');
           </div>
           </div>
   </div>
+
     <div class="col-6 overflow-auto" style="max-height:50vh">
   
     <?php
@@ -89,12 +90,9 @@ include('./Composant_php/add_comment.php');
             </div>
           </div>
           </div>
-      <?php }
-     
-    }
-   
+      <?php }   
+    }   
       ?>
-       
   </div>
   
 </div>
