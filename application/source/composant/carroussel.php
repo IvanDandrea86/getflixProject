@@ -15,7 +15,7 @@
             $response_data = json_decode($json_data);
             // All user data exists in 'data' object
             $films = $response_data->results;
-            for ($i = 0; $i < 5; $i++) {
+            for ($i = 0; $i < 7; $i++) {
             ?>
               <div class="col" >
                 <div class="card sh border-0" id="film-card">

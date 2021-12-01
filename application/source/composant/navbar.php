@@ -63,7 +63,7 @@
             <li><a href="?tarifs" class="nav-link px-2 text-white">Tarifs</a></li>
           <?php } ?>
           <li><a href="?faq" class="nav-link px-2 text-white">FAQ</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">À propos</a></li>
+          <li><a href="?about" class="nav-link px-2 text-white">À propos</a></li>
         </ul>
         <?php 
         // CONTROL ON USER CONNECTION
