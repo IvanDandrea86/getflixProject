@@ -4,9 +4,9 @@ function getDetail($id){
     $baseURL = 'https://api.themoviedb.org/3/';
     $APIKEY=getenv("MovieDB_API_KEY");
     $api_url = $baseURL."movie/".$id."?api_key=".$APIKEY."&language=en-US";
-  $json_data = file_get_contents($api_url);
-  $response_data = json_decode($json_data);
-  $details= $response_data;
+    $json_data = file_get_contents($api_url);
+    $response_data = json_decode($json_data);
+    $details= $response_data;
   return $details;
 }
 
@@ -48,5 +48,10 @@ function getUserName($id){
       $row = $result->fetch_assoc();
         return $row["Username"];
 }
+}
+
+function validString($word){
+  $valid_word=str_replace("'","\\'",$word);
+  return $valid_word;
 }
 ?>
