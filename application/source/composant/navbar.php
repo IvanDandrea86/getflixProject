@@ -82,9 +82,12 @@
         ?>
           <form action="" method="post">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <p class="nav-link  mb-0 text-white">  <img class="rounded-circle" src="https://eu.ui-avatars.com/api/?name=<?php
+                <div class="d-flex justify-content-center">
+                <img class="rounded-circle" src="https://eu.ui-avatars.com/api/?name=<?php
                   echo($_SESSION["auth"]);
-                  ?>" width="40">Welcome <?php echo $_SESSION["auth"]; ?></p>
+                  ?>" width="40">
+              <p class="nav-link  mb-0 text-white">  Welcome <?php echo $_SESSION["auth"]; ?></p>
+              </div>
               <li>
                 <a class="nav-link  text-white" aria-current="page" href="?setting"><i class="bi bi-gear"></i> Settings </a>
               </li>

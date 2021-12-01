@@ -60,10 +60,10 @@ include('./Composant_php/add_comment.php');
           </div>
           </div>
   </div>
-    <div class="col-6 overflow-auto" style="max-height:30vh">
+    <div class="col-6 overflow-auto" style="max-height:50vh">
   
     <?php
-    $sql = "SELECT *FROM comments WHERE `comments`.`Movie_ref`=$film_det->id";
+    $sql = "SELECT *FROM comments WHERE `comments`.`Movie_ref`=$film_det->id ORDER BY `Date_comment` DESC;";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
