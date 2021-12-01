@@ -1,10 +1,14 @@
 <?php 
 session_start();
 ?>
-<body class="bg-danger">
+
 <?php
 // INCLUDE HEAD FUNCTIONS AND NAVBAR
 include("./composant/head.html");
+?>
+<body class="bg-danger">
+<?php
+
 include('./Composant_php/function.php');
 include("./Composant_php/delete.php");
 include ("./Composant_php/create.php");
@@ -22,11 +26,14 @@ if ($_SESSION["auth"]=="root"){
 }
 //ROUTING FOR USER SESSION
 if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
+
+    
+
     if(isset($_GET["setting"])){
         include ("./composant/userSettings.php"); 
     } 
-    if(isset($_GET["gallery"])){
-        include ("./composant/gallery.php"); 
+    if(isset($_GET["gallery"]) )  {
+        include ("./composant/carroussel.php"); 
     }
     if(isset($_GET["player"])){
         include ("./composant/playerYou.php");  
@@ -42,6 +49,10 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     }
     if(isset($_GET["faq"])){
         include ("./composant/FAQ.php"); 
+    }
+    else{
+        require_once ("./composant/carroussel.php"); 
+
     }
 }
 // ROUTING FOR UNRESIGERED SESSION
