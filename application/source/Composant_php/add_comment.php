@@ -2,7 +2,7 @@
 include "config.php";
 
 if(isset($_POST['submit_comment']) & !empty($_POST['subject'])){
-	$subject =  $_POST['subject'];
+	$subject = validString( $_POST['subject']);
     $user_id=$_SESSION["id"];
 	$date=date("Y-n-d H:i:s");
 	$movieref=intval($film_det->id);

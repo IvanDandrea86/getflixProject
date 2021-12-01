@@ -31,7 +31,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <form action="" method="get">
                     <?php
-                    // SQL QUERY TO GET ALL GENRES AVIABLE
+                    // API QUERY TO GET ALL GENRES AVAIABLE
                     $baseURL = 'https://api.themoviedb.org/3/';
                     $APIKEY = getenv("MovieDB_API_KEY");
                     $keyword = str_replace(" ", "%", $_GET["search"]);
@@ -82,7 +82,9 @@
         ?>
           <form action="" method="post">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <p class="nav-link  mb-0 text-white"><i class="bi bi-house-door"></i> Welcome <?php echo $_SESSION["auth"]; ?></p>
+              <p class="nav-link  mb-0 text-white">  <img class="rounded-circle" src="https://eu.ui-avatars.com/api/?name=<?php
+                  echo($_SESSION["auth"]);
+                  ?>" width="40">Welcome <?php echo $_SESSION["auth"]; ?></p>
               <li>
                 <a class="nav-link  text-white" aria-current="page" href="?setting"><i class="bi bi-gear"></i> Settings </a>
               </li>
