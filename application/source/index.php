@@ -24,10 +24,9 @@ include ("./composant/navbar.php");
 if ($_SESSION["auth"]=="root"){
     include("./composant/admin.php");
 }
+// COmment added
 //ROUTING FOR USER SESSION
 if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
-
-    
 
     if(isset($_GET["setting"])){
         include ("./composant/userSettings.php"); 
@@ -51,7 +50,7 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
         include ("./composant/FAQ.php"); 
     }
     else{
-        require_once ("./composant/carroussel.php"); 
+        // require_once ("./composant/carroussel.php"); 
 
     }
 }
