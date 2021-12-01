@@ -1,12 +1,17 @@
 <?php
 include "config.php";
-$username_err = " ";
-$email_err = " ";
-$password_err = " ";
-$confirm_password_err = " ";
-$error = array();
-if (isset($_POST["signin_submit"])) {
 
+  //Control Error state Username
+
+$username_err=" ";
+$email_err=" ";
+$password_err=" ";
+$confirm_password_err=" ";
+$error=array();
+$uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $number    = preg_match('@[0-9]@', $password);
+if (isset($_POST["signin_submit"])){
   //Control Error state Username
 
   if (empty(trim($_POST["Username"]))) { //CONTROL IF EMPTY INPUT
@@ -54,6 +59,13 @@ if (empty(trim($_POST["confirm_Password"]))) { //CONTROL IF EMPTY INPUT
     $confirm_password_err = "Password did not match.";
     array_push($error, $confirm_password_err);
   }
+
+    elseif (!$uppercase || !$lowercase || !$number) {
+      $password_err="Password must have at least 1 uppercase and 1 number";
+      array_push($error,$password_err);
+    }
+  
+
 }
 // Control Error state
 if (empty($_POST["Email"])) { //CONTROL IF EMPTY INPUT
@@ -67,7 +79,6 @@ if (empty($_POST["Email"])) { //CONTROL IF EMPTY INPUT
     array_push($error, $email_err);
   }
 }
-
 // CHECK ERROR COUNTER
 if (count($error) > 0) { //COUNT IF THERE ARE ERRORS
 
@@ -83,13 +94,11 @@ if (count($error) > 0) { //COUNT IF THERE ARE ERRORS
   $result = $conn->query($sql);
   if ($result == TRUE) {
     $mode = "New user added";
-
-?>
-    <script>
-      // OPEN MODAL WITH JQUERY
-      $(window).ready(function() {
-        <?php $mode = "New user added"; ?>
-        $('#popUpSucces').modal('show');
+      ?>
+      <script>
+        // OPEN MODAL WITH JQUERY
+      $(window).ready(function(){
+      $('#popUpSucces').modal('show'); 
       })
     </script>
 <?php

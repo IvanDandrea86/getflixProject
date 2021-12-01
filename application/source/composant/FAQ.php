@@ -1,65 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F.A.Q.</title>
-</head>
-<body>
-    <p id="quest">Retrouvez ici la liste des questions/réponses les plus souvent posé</p>
 
-    <div class="container-faq">
-        <div class="questions">
-            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <img src="./media/croix.svg" alt="">
-        </div>
-        <div class="toggle">
-            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis unde possimus consectetur praesentium necessitatibus minima illo tenetur quos quisquam, veniam libero, maiores quae incidunt inventore. Quod facilis illo perspiciatis consequuntur.</p>
-
-        </div>
-
-        <div class="questions">
-            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <img src="./media/croix.svg" alt="">
-        </div>
-        <div class="toggle">
-            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis unde possimus consectetur praesentium necessitatibus minima illo tenetur quos quisquam, veniam libero, maiores quae incidunt inventore. Quod facilis illo perspiciatis consequuntur.</p>
-
-        </div>
-
-        <div class="questions">
-            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <img src="./media/croix.svg" alt="">
-        </div>
-        <div class="toggle">
-            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis unde possimus consectetur praesentium necessitatibus minima illo tenetur quos quisquam, veniam libero, maiores quae incidunt inventore. Quod facilis illo perspiciatis consequuntur.</p>
-
-        </div>
-
-        <div class="questions">
-            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <img src="./media/croix.svg" alt="">
-        </div>
-        <div class="toggle">
-            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis unde possimus consectetur praesentium necessitatibus minima illo tenetur quos quisquam, veniam libero, maiores quae incidunt inventore. Quod facilis illo perspiciatis consequuntur.</p>
-
-        </div>
-
-        <div class="questions">
-            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <img src="./media/croix.svg" alt="">
-        </div>
-        <div class="toggle">
-            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis unde possimus consectetur praesentium necessitatibus minima illo tenetur quos quisquam, veniam libero, maiores quae incidunt inventore. Quod facilis illo perspiciatis consequuntur.</p>
-
-        </div>
-        
+  <div class="row d-flex justify-content-center align-items-center">
+  <div class="col ">
+<div class="accordion w-50 align-content-" id="basicAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#basicAccordionCollapseOne" aria-expanded="false"
+        aria-controls="collapseOne">
+        Quelle voix les sourds ont dans leur têtes quand ils pensent, vu que ils n'ont jamais entendu?
+      </button>
+    </h2>
+    <div id="basicAccordionCollapseOne" class="accordion-collapse collapse"
+      aria-labelledby="headingOne" data-bs-parent="#basicAccordion" >
+      <div class="accordion-body">
+        <strong>Qu'entendent les sourds?</strong> On ne sais pas en fait, peut être que ils imaginent quelqu'un qui fait des signes dans leur crâne c'est possible, ou bien ils s'imaginent une voix et ne savent pas que par exemple c'est la même que Al Pacino.
+      </div>
     </div>
-</body>
-</html>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#basicAccordionCollapseTwo" aria-expanded="false"
+        aria-controls="collapseTwo">
+        Pourquoi MARVEL prévoit de faire 3 autres films de Spider-man?
+      </button>
+    </h2>
+    <div id="basicAccordionCollapseTwo" class="accordion-collapse collapse"
+      aria-labelledby="headingTwo" data-bs-parent="#basicAccordion" >
+      <div class="accordion-body">
+        <strong>Quoi encore 3 films Spider-man ??</strong> Et oui je suis un peu choqué aussi, c'est pas comme si Tom Holland était si transcendant à l'écran comparé à Tobey Mcguire, mais bon apparement MARVEL l'aime beaucoup donc attendez vous a encore plus de films avec votre fidèle serviteur l'araignée.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#basicAccordionCollapseThree" aria-expanded="false"
+        aria-controls="collapseThree">
+        Pourquoi l'eau ça mouille?
+      </button>
+    </h2>
+    <div id="basicAccordionCollapseThree" class="accordion-collapse collapse"
+      aria-labelledby="headingThree" data-bs-parent="#basicAccordion" >
+      <div class="accordion-body">
+        <strong>Nan mais c'est quoi ces questions débiles la?</strong> Ca va détend toi user premier degré, si t'as perdu ton mot de passe c'est ta faute fallait le noter ou le retenir parce que j'ai pas de système de récupération de mot de passe, CHEH!
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

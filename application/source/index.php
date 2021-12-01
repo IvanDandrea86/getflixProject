@@ -1,12 +1,14 @@
 <?php 
 session_start();
 ?>
-<body class="bg-danger">
-
 
 <?php
 // INCLUDE HEAD FUNCTIONS AND NAVBAR
 include("./composant/head.html");
+?>
+<body class="bg-danger">
+<?php
+
 include('./Composant_php/function.php');
 include("./Composant_php/delete.php");
 include ("./Composant_php/create.php");
@@ -14,21 +16,21 @@ include ("./Composant_php/updateUserInfo.php");
 include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
 include ("./composant/navbar.php");
-
 ?>
-<main id="bg_img">  
+<main id="bg_img" >  
 <?php 
 // CONTROL IF IS SESSION ADMIN
 if ($_SESSION["auth"]=="root"){
     include("./composant/admin.php");
 }
+// COmment added
 //ROUTING FOR USER SESSION
 if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     if(isset($_GET["setting"])){
         include ("./composant/userSettings.php"); 
     } 
-    if(isset($_GET["gallery"])){
-        include ("./composant/gallery.php"); 
+    if(isset($_GET["gallery"]) )  {
+        include ("./composant/carroussel.php"); 
     }
     if(isset($_GET["player"])){
         include ("./composant/playerYou.php");  
@@ -40,23 +42,27 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
         include ("./composant/search_genres.php");     
     }
     if(isset($_GET["user_gallery"])){
-        include ("./composant/carroussel.php");  
+        include ("./composant/movieSlider.php");  
     }
     if(isset($_GET["faq"])){
         include ("./composant/FAQ.php"); 
+    }
+    if(isset($_GET["about"])){
+        include ("./composant/propos.php"); 
+    }
+    else{
+        // require_once ("./composant/carroussel.php"); 
     }
 }
 // ROUTING FOR UNRESIGERED SESSION
 elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
 
     if(isset($_GET["intro"])){
-        include ("./composant/pre-acceuil.php");  
+        require_once ("./composant/pre-acceuil.php");  
     }
     if(isset($_GET["faq"])){
         include ("./composant/FAQ.php"); 
     }
-   
-   
         elseif(isset($_GET["login"])){
         require_once ("./composant/formulaire_connexion.php");
     }
@@ -66,8 +72,11 @@ elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
         elseif(isset($_GET["signup"])){
         include ("./composant/formulaire_inscription.php");
     }
+    if(isset($_GET["about"])){
+        include ("./composant/propos.php"); 
+    }
     else{
-        include ("./composant/pre-acceuil.php");  
+        require_once("./composant/pre-acceuil.php");  
     }   
 }
 ?>
@@ -87,6 +96,7 @@ include("./composant/popUpDelete.php");
     <script src="./js/script.js"></script>  
     <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
     <script  src="./js/valid_status.js"></script>
+    <script  src="./js/FAQ.js"></script>
     <script  src="./js/chart.js"></script>
 </body>
 </html>
