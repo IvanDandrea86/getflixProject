@@ -17,7 +17,7 @@ include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
 include ("./composant/navbar.php");
 ?>
-<main id="bg_img">  
+<main id="bg_img" >  
 <?php 
 // CONTROL IF IS SESSION ADMIN
 if ($_SESSION["auth"]=="root"){
