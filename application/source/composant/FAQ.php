@@ -1,8 +1,8 @@
 
-  <div class="row d-flex justify-content-center align-items-center">
-  <div class="col ">
-<div class="accordion w-50 align-content-" id="basicAccordion">
-  <div class="accordion-item">
+  <div class="container pt-5 bg-color-red">
+  <div class="col justify-content-center align-center">
+<div class="accordion justify-content-center" id="basicAccordion">
+  <div class="accordion-item margin-10" id="ques1">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
         data-bs-target="#basicAccordionCollapseOne" aria-expanded="false"
@@ -17,7 +17,8 @@
       </div>
     </div>
   </div>
-  <div class="accordion-item">
+  
+  <div class="accordion-item" id="ques1">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
         data-bs-target="#basicAccordionCollapseTwo" aria-expanded="false"
@@ -32,7 +33,8 @@
       </div>
     </div>
   </div>
-  <div class="accordion-item">
+  
+  <div class="accordion-item" id="ques1">
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
         data-bs-target="#basicAccordionCollapseThree" aria-expanded="false"
