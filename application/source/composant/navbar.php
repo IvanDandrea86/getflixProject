@@ -1,7 +1,7 @@
 <!-- 
   NAVBAR
  -->
-<header class="p-3 bg-dark text-white sticky-top">
+<header class="p-3 bg-dark text-white position-top">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <div class="preacceuil"><a href="?preacc" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -63,7 +63,7 @@
             <li><a href="?tarifs" class="nav-link px-2 text-white">Tarifs</a></li>
           <?php } ?>
           <li><a href="?faq" class="nav-link px-2 text-white">FAQ</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">À propos</a></li>
+          <li><a href="?about" class="nav-link px-2 text-white">À propos</a></li>
         </ul>
         <?php 
         // CONTROL ON USER CONNECTION

@@ -16,19 +16,16 @@ include ("./Composant_php/updateUserInfo.php");
 include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
 include ("./composant/navbar.php");
-
 ?>
-<main id="bg_img">  
+<main id="bg_img" >  
 <?php 
 // CONTROL IF IS SESSION ADMIN
 if ($_SESSION["auth"]=="root"){
     include("./composant/admin.php");
 }
+// COmment added
 //ROUTING FOR USER SESSION
 if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
-
-    
-
     if(isset($_GET["setting"])){
         include ("./composant/userSettings.php"); 
     } 
@@ -45,14 +42,16 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
         include ("./composant/search_genres.php");     
     }
     if(isset($_GET["user_gallery"])){
-        include ("./composant/carroussel.php");  
+        include ("./composant/movieSlider.php");  
     }
     if(isset($_GET["faq"])){
         include ("./composant/FAQ.php"); 
     }
+    if(isset($_GET["about"])){
+        include ("./composant/propos.php"); 
+    }
     else{
-        require_once ("./composant/carroussel.php"); 
-
+        // require_once ("./composant/carroussel.php"); 
     }
 }
 // ROUTING FOR UNRESIGERED SESSION
@@ -72,6 +71,9 @@ elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     }
         elseif(isset($_GET["signup"])){
         include ("./composant/formulaire_inscription.php");
+    }
+    if(isset($_GET["about"])){
+        include ("./composant/propos.php"); 
     }
     else{
         require_once("./composant/pre-acceuil.php");  
