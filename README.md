@@ -68,7 +68,8 @@ The birth of this streaming plateform wouldn't have been possible without
 + The crafty Nicolas Valiascas :snail:
 + The cunning Anne Jungers :monkey_face:
 
-![A picture of our 4 coding warriors](./images/dreamteam.jpg)
+A picture of our 4 coding warriors
+![]( /images/dreamteam.jpg)
 
 ## Link to our site
 
