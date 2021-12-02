@@ -1,7 +1,6 @@
 <?php 
 session_start();
 ?>
-
 <?php
 // INCLUDE HEAD FUNCTIONS AND NAVBAR
 include("./composant/head.html");
@@ -55,7 +54,6 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
 }
 // ROUTING FOR UNRESIGERED SESSION
 elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
-
     if(isset($_GET["intro"])){
         require_once ("./composant/pre-acceuil.php");  
     }
@@ -63,9 +61,11 @@ elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
         include ("./composant/FAQ.php"); 
     }
         elseif(isset($_GET["login"])){
+         unset($_GET["intro"])   ;
         require_once ("./composant/formulaire_connexion.php");
     }
         elseif(isset($_GET["tarifs"])){
+            unset($_GET["intro"])   ;
         include ("./composant/tarifs.php");    
     }
         elseif(isset($_GET["signup"])){
@@ -74,15 +74,13 @@ elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     if(isset($_GET["about"])){
         include ("./composant/propos.php"); 
     }
-    else{
-        require_once("./composant/pre-acceuil.php");  
-    }   
 }
 ?>
 </main>
 <!-- INCLUDE FOOTER AND MODALS -->
 <?php
 include ("./composant/footer.php");
+include("./composant/pass_recovery.php");
 include("./composant/popupSucces.php");
 include("./composant/popUpDelete.php");
 ?>
@@ -95,7 +93,6 @@ include("./composant/popUpDelete.php");
     <script src="./js/script.js"></script>  
     <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
     <script  src="./js/valid_status.js"></script>
-    <script  src="./js/FAQ.js"></script>
     <script  src="./js/chart.js"></script>
 </body>
 </html>
