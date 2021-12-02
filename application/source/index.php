@@ -8,7 +8,6 @@ include("./composant/head.html");
 ?>
 <body class="bg-danger">
 <?php
-
 include('./Composant_php/function.php');
 include("./Composant_php/delete.php");
 include ("./Composant_php/create.php");

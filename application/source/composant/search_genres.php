@@ -11,7 +11,6 @@
         <div class="col" style="max-width:250px;">
           <div class="card" id="film-card">
           <img class=".img-fluid" width="100%" height="320" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo($films[$i]->poster_path);?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
-
           <div class="card-body" >
             <!-- <p  class="card-text text-light"><?php if(($films[$i]->overview)==""){echo ("Overview not available.");
             }else{  echo($films[$i]->overview);}
@@ -37,8 +36,7 @@
         </div>
   <?php    }
   }
-      }
-     
+      }  
 ?>     
               </div>
             </div>

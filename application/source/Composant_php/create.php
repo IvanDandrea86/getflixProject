@@ -8,9 +8,7 @@ $email_err=" ";
 $password_err=" ";
 $confirm_password_err=" ";
 $error=array();
-$uppercase = preg_match('@[A-Z]@', $password);
-    $lowercase = preg_match('@[a-z]@', $password);
-    $number    = preg_match('@[0-9]@', $password);
+
 if (isset($_POST["signin_submit"])){
   //Control Error state Username
 
@@ -32,14 +30,9 @@ if (isset($_POST["signin_submit"])){
       array_push($error, $username_err);
     }
   }
-  //If it's not a valid Username.
-  $username_err = "Username1";
-  if (filter_var($username_err, FILTER_VALIDATE_EMAIL)) {
-    echo "This is a valid Username!";
-  } else {
-    echo "This is not a valid Username!";
-  }
-}
+  $password=$_POST["Password"];
+  $pattern = '/^(?=.*[0-9])(?=.*[A-Z])$/';
+
 
 // Control error State Password
 if (empty(trim($_POST["Password"]))) { //CONTROL IF EMPTY INPUT
@@ -49,6 +42,11 @@ if (empty(trim($_POST["Password"]))) { //CONTROL IF EMPTY INPUT
   $password_err = "Password must have atleast 6 characters.";
   array_push($error, $password_err);
 }
+elseif (preg_match($pattern,$_POST["Password"])) {
+  $password_err="Password must have at least 1 uppercase and 1 number";
+  array_push($error,$password_err);
+}
+
 // Control Error state Password confirmation
 if (empty(trim($_POST["confirm_Password"]))) { //CONTROL IF EMPTY INPUT
   $confirm_password_err = "Please confirm password.";
@@ -59,13 +57,6 @@ if (empty(trim($_POST["confirm_Password"]))) { //CONTROL IF EMPTY INPUT
     $confirm_password_err = "Password did not match.";
     array_push($error, $confirm_password_err);
   }
-
-    elseif (!$uppercase || !$lowercase || !$number) {
-      $password_err="Password must have at least 1 uppercase and 1 number";
-      array_push($error,$password_err);
-    }
-  
-
 }
 // Control Error state
 if (empty($_POST["Email"])) { //CONTROL IF EMPTY INPUT
@@ -79,18 +70,30 @@ if (empty($_POST["Email"])) { //CONTROL IF EMPTY INPUT
     array_push($error, $email_err);
   }
 }
+$username = filter_var($_POST["Username"], FILTER_SANITIZE_STRING);
+$email = filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL) ;
+$firstname = filter_var($_POST["FirstName"],FILTER_SANITIZE_STRING);
+$lastname = filter_var($_POST["LastName"],FILTER_SANITIZE_STRING);
+
+if (filter_var($_POST["FirstName"],FILTER_SANITIZE_STRING)) {
+ $firstname_err="Firstname contains invalid characters.";
+ array_push($error,$firstname_err);  
+}   
+if (!filter_var($_POST["LastName"],FILTER_SANITIZE_STRING)) {
+   $lastname_err="Lastname contains invalid characters.";
+   array_push($error, $lastname_err);
+}
 // CHECK ERROR COUNTER
 if (count($error) > 0) { //COUNT IF THERE ARE ERRORS
-
 } else {
-  $username = filter_var($_POST["Username"], FILTER_FLAG_HOSTNAME);
-  $email = filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL) ;
+  
   $password =$_POST["Password"];
-  $firstname = filter_var($_POST["FirstName"], FILTER_FLAG_HOSTNAME);
-  $lastname = filter_var($_POST["LastName"], FILTER_FLAG_HOSTNAME);
+  $password_hash=password_hash($password, PASSWORD_DEFAULT);
+  $lastname=validString(($lastname));
+  $firstname=validString($firstname);
   $date = date("Y-n-d H:i:s");
   // IF NO ERRO INSERT INTO DATABE WITH SQL QUERY
-  $sql = "INSERT INTO Users VALUES ( UUID_SHORT(),'$username','$email','$password','$lastname','$firstname',NULL,NULL,'$date')";
+  $sql = "INSERT INTO Users VALUES ( UUID_SHORT(),'$username','$email','$password_hash','$lastname','$firstname',NULL,NULL,'$date')";
   $result = $conn->query($sql);
   if ($result == TRUE) {
     $mode = "New user added";
@@ -107,5 +110,6 @@ if (count($error) > 0) { //COUNT IF THERE ARE ERRORS
     echo "Error:" . $sql . "<br>" . $conn->error;
   }
   $conn->close();
+}
 }
 ?>
