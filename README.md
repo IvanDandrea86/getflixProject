@@ -1,5 +1,6 @@
 # GetFlixProject - Welcome in our :sparkles: :sparkles: streaming plateform :sparkles: :sparkles: ! 
 
+
 ## What is GetFlix?
 GetFlix is a streaming site inspired by platforms such as NetFlix, with a catalog of movies which the users can filter in the search bar. The site includes also a space to comment on the content. Administrators have access to a database to manage the comments.
 
@@ -23,9 +24,10 @@ We had daily meetings to monitor the development of the project, indentify diffi
 
 ### features of the website ... 
 In the end of the project, we have been able to produce a website with the following features:
-+
-+
-+
+
++ A session system: registration, connection/disconnection;
++ Different rights: to have the right to comment a film, you have to first be registered. If you are not yet registered, an message will appear to invite you to do it. 
++ A search bar with filters, where you can search different films categories.
 +
 +
 
@@ -34,6 +36,13 @@ In the end of the project, we have been able to produce a website with the follo
 We had all to create our own development branch and work on it. To facilitate the coordination, Ivan was our Git Master. His role was validate all the commit to merge everything on the main development branch.
 
 2. To create a system of comments
+
+3. To make our code secure:
+We had to protect the data of our users. To make this possible we have decided to add a hash function in our PHP code. This hash function encrypts as an example the code of the password users. so that even in the database it is not impossible for the website administrators tp read the secret information users.
+
+4. To deploy the website
+
+
 
 
 
@@ -44,20 +53,22 @@ We had all to create our own development branch and work on it. To facilitate th
 
 
 ## Tools
-+ HTML5
-+ Bootstrap
-+ Javascript
-+ PHP
++ HTML5 <i class="cib-html5"></i>
++ Bootstrap <i class="cib-bootstrap"></i>
++ Javascript <i class="cib-javascript"></i>
++ PHP <i class="cib-php"></i>
 
 
 ## Our dream team
 
 The birth of this streaming plateform wouldn't have been possible without
 
-+ The brillant Ivan Dandrea
-+ The artful Sofian Mattheus
-+ The crafty Nicolas Valiascas
-+ The cunning Anne Jungers
++ The brillant Ivan Dandrea :frog:
++ The artful Sofian Mattheus :chicken:
++ The crafty Nicolas Valiascas :snail:
++ The cunning Anne Jungers :monkey_face:
+
+![A picture of our 4 coding warriors](./images/dreamteam.jpg)
 
 ## Link to our site
 
