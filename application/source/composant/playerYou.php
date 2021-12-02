@@ -49,7 +49,11 @@ include('./Composant_php/add_comment.php');
             </div>
             <div class="mt-3 border-secondary border">
             <form action="" method="post" class="form-group flex-column d-flex justify-content-between">
-        <textarea class="form-control m-2 shadow textarea" name="subject"></textarea>
+        <textarea class="form-control 
+        <?php echo (isset($comment_err)) ? 'is-invalid' : ''; ?>
+                        m-2 shadow textarea" name="subject"></textarea> 
+                       
+            <span class="invalid-feedback"><?php echo $comment_err; ?></span>
         
       <div class="mt-2 ">
         <button class="btn btn-danger btn-sm shadow-none" type="submit" name="submit_comment"  > Post comment</button>

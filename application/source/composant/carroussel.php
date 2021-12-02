@@ -8,7 +8,7 @@
 
             <?php
             // API QUERY TO GET TRENDING MOVIES
-            $api_url = "https://api.themoviedb.org/3/trending/movie/week?api_key=" . getenv("MovieDB_API_KEY");
+            $api_url = "https://api.themoviedb.org/3/trending/movie/week?api_key=".getenv("MovieDB_API_KEY");
             // Read JSON file
             $json_data = file_get_contents($api_url);
             // Decode JSON data into PHP array

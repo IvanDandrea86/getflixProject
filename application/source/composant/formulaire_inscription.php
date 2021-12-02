@@ -45,11 +45,18 @@ SIGNUP FORM PAGE
         </div>
         <div class="form-group">
             <label for="firstname" class="col-form-label">Firstname:</label>
-            <input type="text" class="form-control" name="FirstName" id="firstname"></input>
+            <input type="text" class="form-control <?php echo (isset($firstname_err)) ? 'is-invalid' : ''; ?>" 
+            name="FirstName" id="firstname"></input>
+            <span class="invalid-feedback"><?php echo $firstname_err; ?></span>
+            <span class="valid-feedback" id="valid-confirm"></span>
         </div>
         <div class="form-group">
             <label for="lastname" class="col-form-label">Lastname:</label>
-            <input type="text" class="form-control" name="LastName" id="lastname"></input>
+            <input type="text" class="form-control <?php echo (isset($lastname_err)) ? 'is-invalid' : ''; ?>" 
+            name="LastName" id="lastname"></input>
+            <span class="invalid-feedback"><?php echo $lastname_err; ?></span>
+            <span class="valid-feedback" id="valid-confirm"></span>
+        
         </div>
         <div class="modal-footer">
             <p>Alredy have an account? <a href="?login" class="link ">Login Here</a></p>

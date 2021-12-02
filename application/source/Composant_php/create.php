@@ -70,18 +70,27 @@ if (empty($_POST["Email"])) { //CONTROL IF EMPTY INPUT
     array_push($error, $email_err);
   }
 }
+$username = filter_var($_POST["Username"], FILTER_SANITIZE_STRING);
+$email = filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL) ;
+$firstname = filter_var($_POST["FirstName"],FILTER_SANITIZE_STRING);
+$lastname = filter_var($_POST["LastName"],FILTER_SANITIZE_STRING);
+
+if (filter_var($_POST["FirstName"],FILTER_SANITIZE_STRING)) {
+ $firstname_err="Firstname contains invalid characters.";
+ array_push($error,$firstname_err);  
+}   
+if (!filter_var($_POST["LastName"],FILTER_SANITIZE_STRING)) {
+   $lastname_err="Lastname contains invalid characters.";
+   array_push($error, $lastname_err);
+}
 // CHECK ERROR COUNTER
 if (count($error) > 0) { //COUNT IF THERE ARE ERRORS
-
 } else {
-  $username = $_POST["Username"];
-  $email = filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL) ;
+  
   $password =$_POST["Password"];
   $password_hash=password_hash($password, PASSWORD_DEFAULT);
-  $firstname = $_POST["FirstName"];
-  $firstname=validString($firstname);
-  $lastname = $_POST["LastName"];
   $lastname=validString(($lastname));
+  $firstname=validString($firstname);
   $date = date("Y-n-d H:i:s");
   // IF NO ERRO INSERT INTO DATABE WITH SQL QUERY
   $sql = "INSERT INTO Users VALUES ( UUID_SHORT(),'$username','$email','$password_hash','$lastname','$firstname',NULL,NULL,'$date')";

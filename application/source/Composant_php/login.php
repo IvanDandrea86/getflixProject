@@ -15,51 +15,48 @@ if (isset($_POST["login"])){
         $username_login_err = "username can only contain letters, numbers and underscore!";
         array_push($login_error, $username_login_err);
     }else{
-        $sql= "SELECT * FROM Users WHERE Username=' ". $_POST["Username"]. "'";
+        $sql= "SELECT * FROM Users WHERE Username='". $_POST["Username"]."'";
         $result = $conn-> query($sql);
-        if($result->num_rows>0){
-            $username_login_err="username already exist";
-            array_push($error,$username_login_err);
+        if($result->num_rows===0){
+            $username_login_err="This username not exist";
+            array_push($login_error,$username_login_err);
         }
     }
     //Controle Password
     if(empty(trim($_POST["Password"]))){
         $password_login_err = "Please enter a password!";
-        array_push($error,$password_login_err);
+        array_push($login_error,$password_login_err);
     }elseif(strlen(trim($_POST["Password"])) < 6){
         $password_login_err = "Password must have atleast 6 characters!";
-        array_push($error, $password_login_err);
+        array_push($login_error, $password_login_err);
     }
-    
     // Controll On user password
         if(count($login_error)==0){
-
             $sql = "SELECT * FROM Users WHERE Username= '".$_POST["Username"]."'";
             $result=$conn->query($sql);
-            while($row=$result->fetch_assoc()){
-                if(!password_verify($_POST["Password"], $row["User_Password"]))  {   
-            $password_login_err="Wrong password!";
-            array_push($login_error, $username_login_err);
-                }
-                else{
+            $row=$result->fetch_assoc();
+                if(  ($_POST["Password"] == $row["User_Password"]) || password_verify($_POST["Password"], $row["User_Password"]))  {   
                     $username=$row["Username"];
-                $id=$row["Id"];
-                $mode=$username." logged in";
-      
-                ?>
-                <script>
-                $(window).ready(function(){
-                $('#popUpSucces').modal('show'); 
-                })
-                </script>
+                    $id=$row["Id"];
+                    $mode=$username." logged in";
+                    ?>
+                    <script>
+                    $(window).ready(function(){
+                    $('#popUpSucces').modal('show'); 
+                    })
+                    </script>
+                    <?php
+                    $_SESSION['auth']=$username;
+                    $_SESSION['id']=$id;    
+            }
+            else{
+                $password_login_err="Wrong password!";
+                array_push($login_error, $username_login_err);
+            }
                 
-              <?php
-            }
-            $_SESSION['auth']=$username;
-            $_SESSION['id']=$id;
-                }
-            }
-        }
+        }            
+}
+        
     
     
       
