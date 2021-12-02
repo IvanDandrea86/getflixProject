@@ -60,19 +60,23 @@ elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     if(isset($_GET["faq"])){
         include ("./composant/FAQ.php"); 
     }
-        elseif(isset($_GET["login"])){
-         unset($_GET["intro"])   ;
+            if(isset($_GET["login"])){
+       
         require_once ("./composant/formulaire_connexion.php");
     }
-        elseif(isset($_GET["tarifs"])){
-            unset($_GET["intro"])   ;
+        if(isset($_GET["tarifs"])){
+           
         include ("./composant/tarifs.php");    
     }
-        elseif(isset($_GET["signup"])){
+        if(isset($_GET["signup"])){
         include ("./composant/formulaire_inscription.php");
     }
     if(isset($_GET["about"])){
         include ("./composant/propos.php"); 
+    }
+    elseif(empty($_GET)){
+        require_once ("./composant/pre-acceuil.php");  
+
     }
 }
 ?>
