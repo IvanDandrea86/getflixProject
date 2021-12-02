@@ -1,5 +1,6 @@
 const el = document.getElementById("chart_target")
 
+
 const data = {
     categories: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May'],
     series: [{

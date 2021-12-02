@@ -25,8 +25,8 @@ SIGN IN FORM PAGE
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <p>Not yet registered? <a href="?signup" class="link ">Register here Here</a></p>
-    <p>Forgot password? <a href="?login" class="link ">Click Here</a></p>
+    <p>Not yet registered? <a href="?signup" class="no-style"><button class="no-style">Register here Here</button></a></p>
+    <p>Forgot password? <button type="button" class="no-style" data-bs-toggle="modal" data-bs-target="#popUpRecovery" class="link ">Click Here</button></p>
     <button class="w-100 btn btn-lg btn-danger" type="submit" name="login" >Sign in</button>
   </form>
   </div>
