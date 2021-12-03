@@ -1,3 +1,8 @@
+    /*
+    Font family
+    */
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
     .info_link {
         text-decoration: none;
         cursor: pointer;
@@ -18,10 +23,7 @@
         transform: scale(1.1) translateY(-6.5px);
     }
     
-    
     #buton:hover {
-        
-        
         background-color: #dc3545;
     }
     
@@ -40,7 +42,7 @@
         background-image: url("../media/cine0.jpg");
         background-size: cover;
         background-repeat: repeat-x;
-     height: 100vh;
+        height: 100vh;
     }
     
     .form-border {
@@ -66,7 +68,42 @@
         color: black;
     }
 
+   .final{
+       justify-content: center;
+       align-items: center;
+   }
+
+   .final .finaal #final{
+       padding-top: 2cm;
+       padding-bottom: 2cm;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .nous{
+        height: 2cm;
+        font-size: 40px;
+        font-style: italic;
+        font-family: 'Lobster', cursive;
+        letter-spacing: 4px;
+    }
+
+    #a{
+        color: red;
+    }
+
+    #b{
+        color: orange;
+    }
+
+    #c{
+        color: yellowgreen;
+    }
     
+    #d{
+        color: yellow;
+    }
+
     .nav-link {
         color: #dc3545;
     }
