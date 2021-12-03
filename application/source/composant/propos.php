@@ -1,8 +1,7 @@
-
 <div class="final d-flex align-self-center">
     <div class="finaal align-self-center">
     
-        <h1 id="final">L'équipe de <strong style="color:red">choc</strong>,<strong style="color:orange">de folie</strong>,<strong style="color:green">de la mort <strong style="color:yellow">qui tue</strong></h1>
+        <h1 id="final">L'équipe de <strong style="color:red">choc</strong>,<strong style="color:orange">de folie</strong>,<strong style="color:green">de la mort <strong style="color:yellow">qui tue.</strong></h1>
         
         <div class="nous"> 
             <a href="/media/groupe1.JPG" class="img-fluid" id="a">Qui a créé ce sublime site?</a>
@@ -15,4 +14,3 @@
         </div>
     </div>
 </div>
-

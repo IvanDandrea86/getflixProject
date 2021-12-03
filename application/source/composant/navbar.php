@@ -6,9 +6,11 @@
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <div class="preacceuil"><a href="?preacc" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
           <img class="image-fluid" src="./media/pop.png" alt="">
+          <h2 id="titre">Getflix</h2>
+
         </a>
       </div>
-      <h2 id="titre">Getflix</h2>
+       
       <?php
       // CONTROL ON ADMIN CONNECTION
       if ($_SESSION["auth"] != "root") {
