@@ -49,19 +49,19 @@ Heroku allows to deploy websites online. To do that you have first to create a "
 
 ## Somes pictures ...
 
-![Our homepage](/application/source/media/homepage.png)
+![Our homepage](/application/source/media/homepage.PNG)
 
 </br>
 
-![The registration system](/application/source/media/registration.png)
+![The registration system](/application/source/media/registration.PNG)
 
 </br>
 
-![The profile information](/application/source/media/profile_information.png)
+![The profile information](/application/source/media/profile_information.PNG)
 
 </br>
 
-![The filters by film categories](/application/source/media/filter.png)
+![The filters by film categories](/application/source/media/filter.PNG)
 
 </br>
 
