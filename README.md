@@ -3,8 +3,9 @@
 
 ## What is GetFlix?
 GetFlix is a streaming site inspired by platforms such as NetFlix, with a catalog of movies which the users can filter in the search bar. The site includes also a space to comment on the content. Administrators have access to a database to manage the comments.
-<img src="https://pbs.twimg.com/media/Ebh9NaaWkAAkZPC.png" width="200" height="200" />
-![](https://pbs.twimg.com/media/Ebh9NaaWkAAkZPC.png)
+</br>
+<img src="https://pbs.twimg.com/media/Ebh9NaaWkAAkZPC.png" width="600" height="600" />
+
 
 ## Why GetFlix?
 This project was build in the context of BeCode Web Development course. The main goal was to consolidate our skills of PHP and MySQL, as well as the ability to communicate and work in a team.
@@ -48,19 +49,19 @@ Heroku allows to deploy websites online. To do that you have first to create a "
 
 ## Somes pictures ...
 
-![Our homepage](./application/source/media/homepage.png)
+![Our homepage](application/source/media/homepage.png)
 
 </br>
 
-![The registration system](./application/source/media/registration.png)
+![The registration system](application/source/media/registration.png)
 
 </br>
 
-![The profile information](./application/source/media/profile_information.png)
+![The profile information](application/source/media/profile_information.png)
 
 </br>
 
-![The filter by categories](./application/source/media/filter.png)
+![The filter by categories](application/source/media/filter.png)
 
 </br>
 
@@ -84,7 +85,7 @@ The birth of this streaming plateform wouldn't have been possible without
 
 </br>
 
-![A picture of our 4 coding warriors](./application/source/media/dreamteam.jpg)
+![A picture of our 4 coding warriors](https://pbs.twimg.com/media/Ebh9NaaWkAAkZPC.pngapplication/source/media/dreamteam.jpg)
 
 
 ## Link to our site
