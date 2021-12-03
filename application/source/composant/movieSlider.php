@@ -82,7 +82,7 @@
         <button>Suggested</button>
         <button>Best of the week</button>
         <button>Last Added</button>
-        <button>Best rating</button>
+        
     </div>
     <div id="carouselExampleControls" class="carousel slide align-item-center" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -99,11 +99,11 @@
             $response_data = json_decode($json_data);
             // All user data exists in 'data' object
             $films = $response_data->results;
-            for ($i = 0; $i < 5; $i++) {
+            for ($i = 0; $i < 4; $i++) {
             ?>
               <div class="col" >
                 <div class="card sh border-0" id="film-card">
-                  <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo ($films[$i]->poster_path); ?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
+                  <img class=".img-fluid" width="100%" height="300" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo ($films[$i]->poster_path); ?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
                   <div class="card-body">
                     
                     <div class="d-flex justify-content-between align-items-center">
@@ -147,13 +147,12 @@
             $response_data = json_decode($json_data);
             // All user data exists in 'data' object
             $films = $response_data->results;
-            for ($i = 0; $i < 5; $i++) {
+            for ($i = 0; $i < 4; $i++) {
             ?>
               <div class="col" >
                 <div class="card sh border-0" id="film-card">
-                  <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo ($films[$i]->poster_path); ?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
+                  <img class=".img-fluid" width="100%" height="300" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo ($films[$i]->poster_path); ?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
                   <div class="card-body">
-                    
                     <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group me-2">
                   <form action="" method="get" class=" d-flex justify-content-center">
@@ -185,7 +184,6 @@
         <!-- carousel item -->
         <div class="carousel-item">
           <div class="row bg danger">
-
             <?php
             // API QUERY TO GET TRENDING MOVIES
             $api_url = "https://api.themoviedb.org/3/trending/movie/week?api_key=" . getenv("MovieDB_API_KEY");
@@ -195,11 +193,11 @@
             $response_data = json_decode($json_data);
             // All user data exists in 'data' object
             $films = $response_data->results;
-            for ($i = 0; $i < 5; $i++) {
+            for ($i = 0; $i < 4; $i++) {
             ?>
               <div class="col" >
-                <div class="card sh border-0" id="film-card">
-                  <img class=".img-fluid" width="100%" height="350" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo ($films[$i]->poster_path); ?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
+                <div class="card border-0" id="film-card">
+                  <img class=".img-fluid" width="100%" height="300" role="img" src="https://image.tmdb.org/t/p/w185/<?php echo ($films[$i]->poster_path); ?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
                   <div class="card-body">
                     
                     <div class="d-flex justify-content-between align-items-center">

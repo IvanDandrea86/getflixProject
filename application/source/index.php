@@ -27,9 +27,7 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     if(isset($_GET["setting"])){
         include ("./composant/userSettings.php"); 
     } 
-    if(isset($_GET["gallery"]) )  {
-        include ("./composant/carroussel.php"); 
-    }
+    
     if(isset($_GET["player"])){
         include ("./composant/playerYou.php");  
     }
@@ -48,8 +46,8 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     if(isset($_GET["about"])){
         include ("./composant/propos.php"); 
     }
-    else{
-        // require_once ("./composant/carroussel.php"); 
+    elseif(empty($_GET)){
+        include ("./composant/movieSlider.php");  
     }
 }
 // ROUTING FOR UNRESIGERED SESSION
