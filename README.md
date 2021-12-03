@@ -66,6 +66,10 @@ Heroku allows to deploy websites online. To achieve that, you have first to crea
 
 </br>
 
+## Our website is also reponsive
+Our website is designed to suit your smartphone and tablette. 
+![](/application/source/media/responsive.PNG)
+
 
 ## Tools
 
