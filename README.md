@@ -68,7 +68,7 @@ Heroku allows to deploy websites online. To do that you have first to create a "
 
 ## Tools
 
-+ HTML5  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="20"/>
++ HTML5  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40"/>
 </br>
 
 + Bootstrap <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="40" height="40" />
