@@ -46,7 +46,7 @@ if(isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     if(isset($_GET["about"])){
         include ("./composant/propos.php"); 
     }
-    elseif(empty($_GET)){
+    elseif(empty($_GET) || isset($_POST["login"])){
         include ("./composant/movieSlider.php");  
     }
 }
