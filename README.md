@@ -80,10 +80,10 @@ Heroku allows to deploy websites online. To do that you have first to create a "
 + PHP  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="60" height="60" />
 </br>
 
-+ Docker  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
++ Docker  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40" />
 </br>
 
-+ Heroku  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg" />
++ Heroku  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg" width="40" height="40" />
 </br>
 
 
