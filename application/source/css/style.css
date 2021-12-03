@@ -57,10 +57,15 @@
         padding-top: 1cm;
     }
 
-    #ques1{
+    .accordion-button{
         background-color: black;
         color: red;
-        /* border-color: red; */
+    }
+
+    #ques1{
+        margin-bottom: 1cm;
+        background-color: black;
+        color: red;
     }
 
     #ques1:hover{
@@ -71,6 +76,7 @@
    .final{
        justify-content: center;
        align-items: center;
+       color: white;
    }
 
    .final .finaal #final{

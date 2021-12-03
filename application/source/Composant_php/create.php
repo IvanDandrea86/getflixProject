@@ -75,14 +75,14 @@ $email = filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL) ;
 $firstname = filter_var($_POST["FirstName"],FILTER_SANITIZE_STRING);
 $lastname = filter_var($_POST["LastName"],FILTER_SANITIZE_STRING);
 
-if (filter_var($_POST["FirstName"],FILTER_SANITIZE_STRING)) {
- $firstname_err="Firstname contains invalid characters.";
- array_push($error,$firstname_err);  
-}   
-if (!filter_var($_POST["LastName"],FILTER_SANITIZE_STRING)) {
-   $lastname_err="Lastname contains invalid characters.";
-   array_push($error, $lastname_err);
-}
+// if (filter_var($_POST["FirstName"],FILTER_SANITIZE_STRING)) {
+//  $firstname_err="Firstname contains invalid characters.";
+//  array_push($error,$firstname_err);  
+// }   
+// if (!filter_var($_POST["LastName"],FILTER_SANITIZE_STRING)) {
+//    $lastname_err="Lastname contains invalid characters.";
+//    array_push($error, $lastname_err);
+// }
 // CHECK ERROR COUNTER
 if (count($error) > 0) { //COUNT IF THERE ARE ERRORS
 } else {
