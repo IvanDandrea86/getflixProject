@@ -70,6 +70,7 @@ Heroku allows to deploy websites online. To achieve that, you have first to crea
 As you can see here bellow, our website has been made **reponsive** and designed to fit any smartphones or tablettes. 
 
 </br>
+
 ![](/application/source/media/responsive.PNG)
 
 
