@@ -28,9 +28,9 @@ We had daily meetings to monitor the development of the project, indentify diffi
 ### features of the website ... 
 In the end of the project, we have been able to produce a website with the following features:
 
-+ A session system: registration, connection/disconnection;
-+ Different rights: to have the right to comment a film, you have to first be registered. If you are not yet registered, an message will appear to invite you to do it. 
-+ A search bar with filters, where you can search different films categories.
++ **A session system**: registration, connection/disconnection;
++ **Different rights**: to have the right to comment a film, you have to first be registered. If you are not yet registered, an message will appear to invite you to do it. 
++ **A search bar with filters**:git  where you can search different films categories.
 
 
 ## Challenges
