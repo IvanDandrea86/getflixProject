@@ -3,7 +3,7 @@
 
 ## What is GetFlix?
 GetFlix is a streaming site inspired by platforms such as NetFlix, with a catalog of movies which the users can filter in the search bar. The site includes also a space to comment on the content. Administrators have access to a database to manage the comments.
-
+<img src="https://pbs.twimg.com/media/Ebh9NaaWkAAkZPC.png" width="200" height="200" />
 ![](https://pbs.twimg.com/media/Ebh9NaaWkAAkZPC.png)
 
 ## Why GetFlix?
