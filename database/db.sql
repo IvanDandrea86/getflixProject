@@ -55,5 +55,10 @@ CREATE TABLE comments (
 --    INSERT INTO comments VALUES(UUID(),"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil rerum libero veritatis ratione numquam illum. Perferendis animi, distinctio rem sequi ad unde voluptatem blanditiis, repellat doloribus harum laboriosam labore autem.
 --    ","2021-9-28 18:00:00",10,50,99541881901285377);
 
+CREATE TABLE password_reset_temp (
+  email varchar(250) NOT NULL,
+  key_temp varchar(250) NOT NULL,
+  expDate datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
