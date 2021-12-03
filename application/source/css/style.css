@@ -42,7 +42,8 @@
         background-image: url("../media/cine0.jpg");
         background-size: cover;
         background-repeat: repeat-x;
-        height: 100vh;
+        min-height: 100vh;
+        height: auto;
     }
     
     .form-border {
