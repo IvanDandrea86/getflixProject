@@ -34,34 +34,34 @@ In the end of the project, we have been able to produce a website with the follo
 
 
 ## Challenges
-1. Creation and coordination of Github branches
+1. **Creation and coordination of Github branches:**
 We had all to create our own development branch and work on it. To facilitate the coordination, Ivan was our Git Master. His role was validate all the commit to merge everything on the main development branch.
 
-2. To create a system of comments.
+2. **To create a system of comments:**
 We use the POST method. The user has to be registered to be able to post a comment. If not the user receives an error message inviting him to register. 
 
-3. To make our code secure:
+3. **To make our code secure:**
 We had to protect the data of our users. To make this possible we have decided to add the hash functions of PHP, password_hash() and validate_hash(), in our code. This hash functions are necessary to encrypt the code of the password users in the database for example. In this way, the privacy of all users is respected. Even for the website administrators it is not possible to see the secret information of the users that are stored in the database as it is encrypted.
 
-4. To deploy the website on Heroku:
+4. **To deploy the website on Heroku:**
 Heroku allows to deploy websites online. To do that you have first to create a "webapp" on Heroku by creating your repository and adding you database on Heroku. To be sure that we could add the MariaDB database without any difficulties we used the JawsDBMaria feature on Heroku.
 
 
 ## Somes pictures ...
 
-![Our homepage](application/source/media/homepage.png)
+![Our homepage](/application/source/media/homepage.png)
 
 </br>
 
-![The registration system](application/source/media/registration.png)
+![The registration system](/application/source/media/registration.png)
 
 </br>
 
-![The profile information](application/source/media/profile_information.png)
+![The profile information](/application/source/media/profile_information.png)
 
 </br>
 
-![The filter by categories](application/source/media/filter.png)
+![The filter by categories](/application/source/media/filter.png)
 
 </br>
 
@@ -85,7 +85,7 @@ The birth of this streaming plateform wouldn't have been possible without
 
 </br>
 
-![A picture of our 4 coding warriors](https://pbs.twimg.com/media/Ebh9NaaWkAAkZPC.pngapplication/source/media/dreamteam.jpg)
+![A picture of our 4 coding warriors](/application/source/media/dreamteam.jpg)
 
 
 ## Link to our site
