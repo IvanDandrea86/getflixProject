@@ -35,28 +35,41 @@ In the end of the project, we have been able to produce a website with the follo
 1. Creation and coordination of Github branches
 We had all to create our own development branch and work on it. To facilitate the coordination, Ivan was our Git Master. His role was validate all the commit to merge everything on the main development branch.
 
-2. To create a system of comments
+2. To create a system of comments.
+We use the POST method. The user has to be registered to be able to post a comment. If not the user receives an error message inviting him to register. 
 
 3. To make our code secure:
-We had to protect the data of our users. To make this possible we have decided to add a hash function in our PHP code. This hash function encrypts as an example the code of the password users. so that even in the database it is not impossible for the website administrators tp read the secret information users.
+We had to protect the data of our users. To make this possible we have decided to add the hash functions of PHP, password_hash() and validate_hash(), in our code. This hash functions are necessary to encrypt the code of the password users in the database for example. In this way, the privacy of all users is respected. Even for the website administrators it is not possible to see the secret information of the users that are stored in the database as it is encrypted.
 
-4. To deploy the website
-
-
-
-
+4. To deploy the website on Heroku:
+Heroku allows to deploy websites online. To do that you have first to create a "webapp" on Heroku by creating your repository and adding you database on Heroku. To be sure that we could add the MariaDB database without any difficulties we used the JawsDBMaria feature on Heroku.
 
 
 ## Somes pictures ...
 
-### Our homepage
+![Our homepage](homepage.png)
+
+</br>
+
+![The registration system](registration.png)
+
+</br>
+
+![The profile information](profile_information.png)
+
+</br>
+
+![The filter by categories](filter.png)
+
+</br>
 
 
 ## Tools
-+ HTML5 <i class="cib-html5"></i>
-+ Bootstrap <i class="cib-bootstrap"></i>
-+ Javascript <i class="cib-javascript"></i>
-+ PHP <i class="cib-php"></i>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
++ HTML5 <i class="devicon-html5-plain"></i>
++ Bootstrap <i class="devicon-bootstrap-plain"></i>
++ Javascript <i class="devicon-javascript-plain"></i>
++ PHP <i class="devicon-php-plain"></i>
 
 
 ## Our dream team
@@ -68,11 +81,14 @@ The birth of this streaming plateform wouldn't have been possible without
 + The crafty Nicolas Valiascas :snail:
 + The cunning Anne Jungers :monkey_face:
 
-![A picture of our 4 coding warriors](./images/dreamteam.jpg)
+</br>
+
+![A picture of our 4 coding warriors](dreamteam.jpg)
+
 
 ## Link to our site
 
-[]()
+[Come and visit our streaming website](https://getflixproject.herokuapp.com/)
 
 
 ## End word
