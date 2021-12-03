@@ -17,10 +17,10 @@ Our first step was to think about the design and content of our future site. We 
 The second step was to think about the deployment of the website. As instruction we had to use docker, MyPHPAdmin and MariaDB. We took a moment to get familiar with those technologies by registering and creating a first database. 
 
 We splitted the tasks between us as following:
-+ Ivan was the project manager and he was in charge of both the back-end and front-end development;
-+ Sofian was in charge of the front-end development part;
-+ Nicolas was in charge of the back-end development part;
-+ Anne was in charge of the back-end development part; 
++ **Ivan** was the project manager and he was in charge of both the back-end and front-end development;
++ **Sofian** was in charge of the front-end development part;
++ **Nicolas** was in charge of the back-end development part;
++ **Anne** was in charge of the back-end development part; 
 
 We had daily meetings to monitor the development of the project, indentify difficulties or redefines tasks.
 
@@ -61,17 +61,21 @@ Heroku allows to deploy websites online. To do that you have first to create a "
 
 </br>
 
-![The filter by categories](/application/source/media/filter.png)
+![The filters by film categories](/application/source/media/filter.png)
 
 </br>
 
 
 ## Tools
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-+ HTML5 <i class="devicon-html5-plain"></i>
-+ Bootstrap <i class="devicon-bootstrap-plain"></i>
-+ Javascript <i class="devicon-javascript-plain"></i>
-+ PHP <i class="devicon-php-plain"></i>
+
++ HTML5 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+</br>
++ Bootstrap <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+</br>
++ Javascript <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+</br>
++ PHP <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+</br>
 
 
 ## Our dream team
