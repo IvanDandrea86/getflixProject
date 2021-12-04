@@ -11,6 +11,7 @@ include('./Composant_php/function.php');
 include("./Composant_php/delete.php");
 include ("./Composant_php/create.php");
 include ("./Composant_php/updateUserInfo.php");
+include ("./Composant_php/UpdatePassword.php");
 include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
 include ("./composant/navbar.php");

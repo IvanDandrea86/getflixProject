@@ -15,8 +15,8 @@
             <!-- <p  class="card-text text-light"><?php if(($films[$i]->overview)==""){echo ("Overview not available.");
             }else{  echo($films[$i]->overview);}
             ?></p> -->
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="btn-group">
+          
+                <div class="btn-group d-flex justify-content-between align-items-center">
                   <form action="" method="get">
                   <button type="submit" name="player" value="<?php echo($films[$i]->id);?>" class="btn btn-sm  text-light btn-outline-secondary">Play</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary text-light" data-bs-toggle="modal" data-bs-target="#popUpOverview<?php echo($films[$i]->id); ?>">Overview</button>
@@ -24,7 +24,7 @@
                   include("./composant/popUpOverview.php");
                   ?>  
                 </form>
-                </div>
+                
                 <span class="badge rounded-pill<?php
                 if (floatval($films[$i]->vote_average) < 3){
                   echo (" bg-danger ");
@@ -32,7 +32,8 @@
                   echo (" bg-warning ");
                 }else{ echo (" bg-success ");}
                 ?>text-dark"><?php echo($films[$i]->vote_average);?></span>
-              </div>
+            </div>  
+            
             </div>
           </div>
         </div>

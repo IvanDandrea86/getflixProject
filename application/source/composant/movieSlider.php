@@ -206,7 +206,7 @@
               <div class="col" >
                 
                 <div class="card border-0" id="film-card">
-                  <img class="img-fluid mw-25"   role="img" src="https://image.tmdb.org/t/p/w342/<?php echo ($films[$i]->poster_path); ?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
+                  <img class="img-fluid mw-25 "   role="img" src="https://image.tmdb.org/t/p/w342/<?php echo ($films[$i]->poster_path); ?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
                   <div class="card-body">   
                     <div class="btn-group me-2 d-flex justify-content-between align-items-center">
                   <form action="" method="get" class="">
