@@ -156,3 +156,7 @@ ADMIN DASHBOARD PAGE
                         <div id="chart_target" style="width:42vw; height:40vh"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>

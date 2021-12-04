@@ -1,6 +1,5 @@
-<div class="album py-5  d-flex justify-content-center">
-    <div class="container ">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="container-fluid ">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 d-flex justify-content-center mt-3">
       <?php
       if(isset($_GET["genres"])){
       $keyword=strval($_GET["genres"]);  
@@ -47,5 +46,5 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
   

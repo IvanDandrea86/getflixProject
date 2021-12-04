@@ -71,7 +71,7 @@
         // CONTROL ON USER CONNECTION
         if (isset($_SESSION["auth"])) {
         ?>
-          <form action="" method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <form action="" method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 align-self-center text-center">
             <label for="site-search"></label>
             <input type="search" id="site-search" name="search" aria-label="Search through site content">
           </form>

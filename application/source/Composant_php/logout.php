@@ -12,6 +12,7 @@ $mode=$_SESSION['auth']." disconnected ";
           <?php
 session_start();
 unset($_SESSION['auth']);
+$_GET["login"]="";
 session_destroy();
 }
 

@@ -1,7 +1,6 @@
-<div class="album py-5  d-flex justify-content-center">
-    <div class="container ">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <?php
+
+    <div class="container-fluid">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 d-flex justify-content-center mt-3">      <?php
       
       if(isset($_GET["search"])){
         $keyword=str_replace(" ","%",$_GET["search"]);
@@ -50,4 +49,4 @@
         </div>
       </div>
     </div>
-  </div>
+ 
