@@ -8,7 +8,7 @@ $det=getDetail($films[$i]->id);
     <div class="modal-dialog">
       <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h5 class="modal-title text-danger text-center " id="popUpSuccesLabel">Overview</h5>
+          <h5 class="modal-title text-danger text-center " id="popUpSuccesLabel"><?php echo($det->original_title." (".$det->release_date.")");;?></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-light">
