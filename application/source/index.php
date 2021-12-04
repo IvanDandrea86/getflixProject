@@ -5,17 +5,18 @@ session_start();
 // INCLUDE HEAD FUNCTIONS AND NAVBAR
 include("./composant/head.html");
 ?>
-<body class="bg-danger">
+<body class="bg-danger" id="bg_img" >
 <?php
 include('./Composant_php/function.php');
 include("./Composant_php/delete.php");
 include ("./Composant_php/create.php");
 include ("./Composant_php/updateUserInfo.php");
+include ("./Composant_php/UpdatePassword.php");
 include ("./Composant_php/login.php");
 include ("./Composant_php/logout.php");
 include ("./composant/navbar.php");
 ?>
-<main id="bg_img" >  
+
 <?php 
 // CONTROL IF IS SESSION ADMIN
 if ($_SESSION["auth"]=="root"){
@@ -78,7 +79,7 @@ elseif (!isset($_SESSION["auth"]) && $_SESSION["auth"] !='root'){
     }
 }
 ?>
-</main>
+
 <!-- INCLUDE FOOTER AND MODALS -->
 <?php
 include ("./composant/footer.php");
@@ -92,7 +93,7 @@ include("./composant/popUpDelete.php");
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>  
-    <script src="./js/script.js"></script>  
+   
     <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
     <script  src="./js/valid_status.js"></script>
     <script  src="./js/chart.js"></script>

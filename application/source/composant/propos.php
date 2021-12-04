@@ -1,16 +1,32 @@
-<div class="final d-flex align-self-center">
-    <div class="finaal align-self-center">
-    
-        <h1 id="final">L'équipe de <strong style="color:red">choc</strong>,<strong style="color:orange">de folie</strong>,<strong style="color:green">de la mort <strong style="color:yellow">qui tue.</strong></h1>
-        
-        <div class="nous"> 
-            <a href="/media/groupe1.JPG" class="img-fluid" id="a">Qui a créé ce sublime site?</a>
-            <br>
-            <a href="/media/groupe3.JPG" class="img-fluid" id="b">Qui est la future équipe pro du front et back? </a>
-            <br>
-            <a href="/media/groupe5.JPG" class="img-fluid" id="c">A combien on a travailler?</a>
-            <br>
-            <a href="/media/groupe7.JPG" class="img-fluid" id="d">Qui a le plus beau sourire?</a>
-        </div>
-    </div>
+<div class="full_screen">
+
+ <h1 id="final" class="text-center text-light">L'équipe </h1>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner d-flex justify-content-around align-items-center">
+                    <div class="carousel-item active">
+                        <img src="./media/groupe1.JPG" class="d-block w-50 img-fluid " alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./media/groupe7.JPG" class="d-block w-50  img-fluid "alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./media/groupe3.JPG" class="d-block w-50 img-fluid" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+     
+   
 </div>

@@ -1,7 +1,8 @@
 <!-- 
 SIGNUP FORM PAGE 
 -->
-<div class="d-flex justify-content-center">
+<div class="full_screen">
+<div class="d-flex justify-content-center ">
     <form class="bg-dark text-light p-3 g-1  form-border" style="height:100%;" action="" method="post">
         <div class="d-flex justify-content-center">
             <img class=" " src="./media/pop.png" alt="popcorn" width="72" height="57">
@@ -64,4 +65,5 @@ SIGNUP FORM PAGE
             <button type="submit" class="btn btn-danger" name="signin_submit" id="signupBtn">Submit</button>
         </div>
     </form>
+</div>
 </div>

@@ -1,3 +1,4 @@
+<div class="full_screen">
 
   <div class="container pt-5 bg-color-red">
   <div class="col justify-content-center align-center">
@@ -49,6 +50,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
 </div>
