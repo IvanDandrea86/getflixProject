@@ -35,7 +35,7 @@ if (isset($_POST["login"])){
             $sql = "SELECT * FROM Users WHERE Username= '".$_POST["Username"]."'";
             $result=$conn->query($sql);
             $row=$result->fetch_assoc();
-                if(   password_verify($_POST["Password"], $row["User_Password"]))  {   
+                if(  ($_POST["Password"] == $row["User_Password"]) || password_verify($_POST["Password"], $row["User_Password"]))  {   
                     $username=$row["Username"];
                     $id=$row["Id"];
                     $mode=$username." logged in";

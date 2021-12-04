@@ -1,6 +1,6 @@
-    
+<div class="full_screen">
 
-        <h1 id="final" class="text-center text-light">L'équipe </h1>
+ <h1 id="final" class="text-center text-light">L'équipe </h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -29,3 +29,4 @@
             </div>
      
    
+</div>

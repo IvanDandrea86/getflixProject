@@ -1,7 +1,7 @@
 <!-- 
     HERO (MAIN INTRO)
  -->
-<div class="d-flex align-items-center justify-content-center">  
+<div class="d-flex align-items-center justify-content-center" style="height:90vh">  
 <div class="px-4 py-5 text-center">
     <img class="d-block mx-auto mb-4" src="../media/pop.png" alt="" width="72" height="57">
     <h1 class="display-5 fw-bold" id="titre">Getflix</h1>

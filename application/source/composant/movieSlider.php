@@ -23,15 +23,11 @@
             background-size:cover;
             background-repeat:no-repeat;
             background-image:url('https://image.tmdb.org/t/p/w500/<?php echo ($films[0]->backdrop_path); ?>');">
-            
-                    
-
-
                 <div class="container">
                 <div class="carousel-caption  text-start">
                     <h1><?php echo ($films[0]->original_title);?></h1>
                     <p><?php echo ($films[0]->overview);?></p>
-                    <p><a class="btn btn-lg btn-warning" href="#">Watch Now</a></p>
+                    <p><a class="btn btn-lg btn-warning" href="?player=<?php echo($films[0]->id);?>">Watch Now</a></p>
                 </div>
                 </div>
             </div>
@@ -44,7 +40,7 @@
                 <div class="carousel-caption text-start text-dark">
                 <h1><?php echo ($films[1]->original_title);?></h1>
                     <p><?php echo ($films[1]->overview);?></p>
-                    <p><a class="btn btn-lg btn-danger" href="#">Watch Now</a></p>
+                    <p><a class="btn btn-lg btn-danger" href="?player=<?php echo($films[1]->id);?>">Watch Now</a></p>
                 </div>
                 </div>
             </div>
@@ -57,7 +53,7 @@
                 <div class="carousel-caption text-end ">
                 <h1><?php echo ($films[2]->original_title);?></h1>
                     <p><?php echo ($films[2]->overview);?></p>
-                    <p><a class="btn btn-lg btn-danger" href="#">Watch Now</a></p>
+                    <p><a class="btn btn-lg btn-danger" href="?player=<?php echo($films[2]->id);?>">Watch Now</a></p>
                 </div>
             </div>
             </div>
@@ -73,13 +69,8 @@
      </div>
 <div class="row">
  
-    <div id="carouselExampleControls" class="carousel slide align-item-center" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3" aria-label="Slide 4"></button>  
-          </div>
+    <div id="carouselExampleControls" class="carousel m-4 slide align-item-center" data-bs-ride="carousel">
+  
       <div class="carousel-inner">
         <!-- carousel item -->
       
@@ -205,7 +196,7 @@
             ?>
               <div class="col" >
                 
-                <div class="card border-0" id="film-card">
+                <div class="card border-0 " id="film-card">
                   <img class="img-fluid mw-25 "   role="img" src="https://image.tmdb.org/t/p/w342/<?php echo ($films[$i]->poster_path); ?>" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="" alt="">
                   <div class="card-body">   
                     <div class="btn-group me-2 d-flex justify-content-between align-items-center">

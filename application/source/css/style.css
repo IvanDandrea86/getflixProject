@@ -7,6 +7,9 @@
         text-decoration: none;
         cursor: pointer;
     }
+    .full_screen{
+        height:100vh;
+    }
     .no-style{
             text-decoration: none;
             color:#fff;

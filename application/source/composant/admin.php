@@ -62,48 +62,45 @@ ADMIN DASHBOARD PAGE
                          */
                         $sql = "SELECT *FROM Users";
                         $result = $conn->query($sql);
+
                         ?>
-                        <div class="container text-center">
-                            <h2>Users List</h2>
-                            <div class="col ">
-                                <table class="table table-dark table-striped text-white">
-                                    <thead>
+                        <div class="container">
+                        <div class="col">
+                        <table class="table table-dark table-striped text-white">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Last Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                ?>
                                         <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Username</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">First Name</th>
-                                            <th scope="col">Last Name</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        if ($result->num_rows > 0) {
-                                            while ($row = $result->fetch_assoc()) {
-                                        ?>
-                                                <tr scope="row">
-                                                    <td><?php echo $row['Id']; ?></td>
-                                                    <td><?php echo $row['Username']; ?></td>
-                                                    <td><?php echo $row['Email']; ?></td>
-                                                    <td><?php echo $row['FirstName']; ?></td>
-                                                    <td><?php echo $row['LastName']; ?></td>
-                                                    <td><?php echo $row['Registration']; ?></td>
-                                                    <td>
-                                                        <a href="update.php?PersonID=
+                                            <th scope="row"><?php echo $row['Id']; ?></td>
+                                            <td><?php echo $row['Username']; ?></td>
+                                            <td><?php echo $row['Email']; ?></td>
+                                            <td><?php echo $row['Registration']; ?></td>
+                                            <td>
+                                                <a href="update.php?PersonID=
                         <?php echo $row["PersonID"]; ?>
                         " class="btn btn-secondary">Edit</a>
-                                                        &nbsp;
-                                                        <a href="index.php?delete=<?php echo $row["PersonID"]; ?>" class="btn btn-danger">Delete</a>
-                                                    </td>
-                                                </tr>
-                                        <?php }
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
+                                                &nbsp;
+                                                <a href="index.php?delete=<?php echo $row["PersonID"]; ?>" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                <?php }
+                                }
+                                ?>
+                            </tbody>
+                        </table>
                         </div>
-
+                        </div>
                     </div>
                     <div class="tab-pane" id="all_comments">
                         <h6>Comments List</h6>
@@ -115,16 +112,15 @@ ADMIN DASHBOARD PAGE
                         $sql = "SELECT *FROM comments";
                         $result = $conn->query($sql);
                         ?>
-                        <div class="container text-center">
-                            <h2>Users List</h2>
+                        <div class="container">
                             <div class="col ">
                                 <table class="table text-white">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Comment</th>
-                                            <th>Movie reference</th>
-                                            <th>User ID</th>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Comment</th>
+                                            <th scope="col">Movie reference</th>
+                                            <th scope="col">User ID</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -133,7 +129,7 @@ ADMIN DASHBOARD PAGE
                                             while ($row = $result->fetch_assoc()) {
                                         ?>
                                                 <tr>
-                                                    <td><?php echo $row['Id_comments']; ?></td>
+                                                    <th scope="row"><?php echo $row['Id_comments']; ?></td>
                                                     <td><?php echo $row['Comment_text']; ?></td>
                                                     <td><?php echo $row['Movie_ref']; ?></td>
                                                     <td><?php echo $row['User_id']; ?></td>
