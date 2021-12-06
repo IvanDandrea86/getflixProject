@@ -5,7 +5,7 @@ $username_login_err="";
 $password_login_err="";
 $login_error=array();
 
-if (isset($_POST["login"])){
+if (isset($_POST["login"]) || isset($_POST["Password"])){
 
     //controle username
     if (empty(trim($_POST["Username"]))){
