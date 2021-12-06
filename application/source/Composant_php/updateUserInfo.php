@@ -8,7 +8,12 @@ include "config.php";
     $firstname= validString($_POST["FristName_setting"]);
     $lastname= validString($_POST["LastName_setting"]);
     $bio=validString($_POST["Bio_setting"]);
-    $location=$_POST["Location_setting"];
+    $location=validString($_POST["Location_setting"]);
+    $firstname=filter_var($location, FILTER_SANITIZE_STRING);
+    $lastname= filter_var($lastname, FILTER_SANITIZE_STRING);
+    $bio=filter_var($bio, FILTER_SANITIZE_STRING);
+    $location=filter_var($location, FILTER_SANITIZE_STRING);
+    
     $sql=" UPDATE Users SET Username='$username',Email='$email',LastName='$lastname',FirstName='$firstname',Bio='$bio',User_location='$location' WHERE Id= '$user_id'";
     $result =$conn->query($sql);
     if ($result ==TRUE){
